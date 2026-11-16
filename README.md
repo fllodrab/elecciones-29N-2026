@@ -4,13 +4,21 @@ Comparativa neutral de lo que dicen por escrito Frente Amplio, Podemos, PP, PSOE
 
 ## Cómo funciona
 
-Es una única página estática, `index.html`, sin dependencias ni compilación. Los datos están en la constante `DATA` del script (respuestas por pregunta y propuestas destacadas por tema) y la lista `P` describe cada partido y su fuente.
+Es una página estática sin dependencias ni compilación:
+
+- `index.html`: presentación y lógica.
+- `data.js`: todos los datos (fecha y estado de la revisión, partidos y fuentes, respuestas por pregunta y propuestas por tema).
+- `scripts/validar.js`: comprueba que `data.js` es coherente (`node scripts/validar.js`).
 
 Para verla en local basta con abrir `index.html` en el navegador.
 
 ## Tu brújula: hexágono de afinidad
 
 Al pulsar «Tu brújula» el resultado se muestra como una ficha tipo videojuego de fútbol: afinidad global (0–100) y un hexágono con seis ejes que agrupan los 8 temas (VIV vivienda, SPU sanidad y educación, TRA empleo y pensiones, IMP impuestos, INM inmigración, CLI clima y energía). Las pestañas cambian de partido. Se puede volver a las barras poniendo `FEATURES.hexBrujula=false` en el script.
+
+## Actualización diaria
+
+Una tarea programada revisa las fuentes a las 08:00 y a las 15:00 (hora de Madrid). Si algún partido publica o cambia su programa, actualiza `data.js` en una rama `datos/…` y abre una pull request; al fusionarla, GitHub Pages publica la web en un par de minutos. Si no hay novedades, no cambia nada. El procedimiento y los criterios están en `CLAUDE.md`.
 
 ## Criterios
 
