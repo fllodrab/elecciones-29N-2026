@@ -8,6 +8,10 @@ Es una única página estática, `index.html`, sin dependencias ni compilación.
 
 Para verla en local basta con abrir `index.html` en el navegador.
 
+## Tu brújula: hexágono de afinidad
+
+Al pulsar «Tu brújula» el resultado se muestra como una ficha tipo videojuego de fútbol: afinidad global (0–100) y un hexágono con seis ejes que agrupan los 8 temas (VIV vivienda, SPU sanidad y educación, TRA empleo y pensiones, IMP impuestos, INM inmigración, CLI clima y energía). Las pestañas cambian de partido. Se puede volver a las barras poniendo `FEATURES.hexBrujula=false` en el script.
+
 ## Criterios
 
 - Solo documentos de los propios partidos.

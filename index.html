@@ -146,6 +146,37 @@ dialog::backdrop{background:rgba(10,12,16,.45);backdrop-filter:blur(2px)}
 .fill{height:100%;background:var(--ink);border-radius:5px;transition:width .35s}
 .bar span{font-family:var(--f-mono);font-size:12px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
 
+/* hexágono de afinidad (estilo ficha de jugador): 6 ejes, monocromo */
+.ptabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.ptab{border:1px solid var(--line);background:var(--raise);border-radius:10px;padding:6px 4px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:1px;min-width:0}
+.ptab b{font-family:var(--f-display);font-size:12.5px;letter-spacing:.02em}
+.ptab span{font-family:var(--f-mono);font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.ptab[aria-selected="true"]{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
+.ptab[aria-selected="true"] span{color:inherit;opacity:.8}
+.hexcard{background:linear-gradient(160deg,var(--raise),var(--soft));border:1px solid var(--line);border-radius:18px;padding:14px;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:center}
+.hexcard .ovr{display:flex;flex-direction:column;align-items:center;line-height:1}
+.hexcard .ovr strong{font-family:var(--f-display);font-size:46px;font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.hexcard .ovr small{font-family:var(--f-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.hexcard .who{display:flex;flex-direction:column;gap:2px;min-width:0}
+.hexcard .who b{font-family:var(--f-display);font-size:20px;font-weight:700}
+.hexcard .who span{font-size:12px;color:var(--muted)}
+.hexsvg{grid-column:1/-1;width:100%;max-width:340px;justify-self:center;display:block;overflow:visible}
+.hexsvg .ring{fill:none;stroke:var(--line);stroke-width:1}
+.hexsvg .ring.out{stroke:var(--faint);stroke-width:1.5}
+.hexsvg .spoke{stroke:var(--line);stroke-width:1}
+.hexsvg .shape{fill:var(--ink);fill-opacity:.18;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round;transform-origin:150px 150px;animation:hexgrow .45s cubic-bezier(.2,.8,.2,1)}
+.hexsvg .dot{fill:var(--surface);stroke:var(--ink);stroke-width:2}
+.hexsvg .ax{font-family:var(--f-mono);font-size:11px;fill:var(--muted);letter-spacing:.06em}
+.hexsvg .val{font-family:var(--f-display);font-size:15px;font-weight:800;fill:var(--ink)}
+.hexsvg .off{opacity:.45}
+@keyframes hexgrow{from{transform:scale(.15);opacity:0}to{transform:none;opacity:1}}
+.stats{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 16px;border-top:1px solid var(--line);padding-top:10px}
+.stats div{display:flex;gap:8px;align-items:baseline;font-size:13px;min-width:0}
+.stats b{font-family:var(--f-display);font-weight:800;font-size:16px;min-width:2.2ch;text-align:right;font-variant-numeric:tabular-nums}
+.stats i{font-style:normal;font-family:var(--f-mono);font-size:11px;color:var(--muted)}
+.stats span{line-height:1.25}
+@media (max-width:440px){.ptab b{font-size:11px}.hexcard{padding:10px}.hexcard .ovr strong{font-size:38px}}
+
 footer{display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px}
 
 @media (max-width:760px){
@@ -274,20 +305,50 @@ document.getElementById("panel").addEventListener("click",e=>{
     b.parentElement.querySelectorAll("[data-v]").forEach(x=>x.setAttribute("aria-pressed",x.dataset.v===me[id].v))}
   pill();
 });
+// Interruptor de la funcionalidad (Trunk Based Development): false vuelve a las barras.
+const FEATURES={hexBrujula:true};
+// 6 ejes del hexágono: los 8 temas, agrupando los que comparten ámbito.
+const HEX=[{ab:"VIV",n:"Vivienda",t:["vivienda"]},{ab:"SPU",n:"Sanidad y educación",t:["sanidad","educacion"]},{ab:"TRA",n:"Empleo y pensiones",t:["empleo","pensiones"]},{ab:"IMP",n:"Impuestos",t:["impuestos"]},{ab:"INM",n:"Inmigración",t:["inmigracion"]},{ab:"CLI",n:"Clima y energía",t:["clima"]}];
+function score(p,list){let pts=0,max=0,nd=0;list.forEach(([q,m])=>{const w=m.imp?2:1,v=DATA.q[q].a[p.id][0];max+=w;
+  if(v==="na")nd++;else if(v===m.v)pts+=w;else if(v==="parcial"||m.v==="parcial")pts+=w/2;});return {pts,max,nd}}
 function tally(){
   const act=Object.entries(me).filter(([,m])=>m.v);const max=act.reduce((s,[,m])=>s+(m.imp?2:1),0);
-  return {act,max,rows:P.map(p=>{let pts=0,nd=0;act.forEach(([q,m])=>{const w=m.imp?2:1,v=DATA.q[q].a[p.id][0];
-    if(v==="na")nd++;else if(v===m.v)pts+=w;else if(v==="parcial"||m.v==="parcial")pts+=w/2;});return {p,pts,nd}})};
+  return {act,max,rows:P.map(p=>{const {pts,nd}=score(p,act);
+    const axes=HEX.map(h=>{const qs=new Set(h.t.flatMap(t=>DATA.topics.find(x=>x.id===t).qs));const r=score(p,act.filter(([q])=>qs.has(q)));
+      return {...h,v:r.max?Math.round(100*r.pts/r.max):null}});
+    return {p,pts,nd,pct:max?Math.round(100*pts/max):0,axes}})};
+}
+function hexCard(r){
+  const C=150,R=100,pt=(i,f)=>{const a=-Math.PI/2+i*Math.PI/3;return [C+R*f*Math.cos(a),C+R*f*Math.sin(a)]};
+  const poly=f=>HEX.map((_,i)=>pt(i,typeof f==="function"?f(i):f).map(n=>n.toFixed(1)).join(",")).join(" ");
+  const val=i=>Math.max(.03,(r.axes[i].v??0)/100);
+  const rings=[.25,.5,.75,1].map(f=>`<polygon class="ring${f===1?" out":""}" points="${poly(f)}"/>`).join("");
+  const spokes=HEX.map((_,i)=>{const [x,y]=pt(i,1);return `<line class="spoke" x1="${C}" y1="${C}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}"/>`}).join("");
+  const labels=r.axes.map((a,i)=>{const [x,y]=pt(i,1.3),anc=Math.abs(x-C)<5?"middle":x>C?"start":"end";
+    return `<g class="${a.v==null?"off":""}"><text class="val" x="${x.toFixed(1)}" y="${(y-2).toFixed(1)}" text-anchor="${anc}">${a.v??"–"}</text><text class="ax" x="${x.toFixed(1)}" y="${(y+12).toFixed(1)}" text-anchor="${anc}">${a.ab}</text></g>`}).join("");
+  const dots=HEX.map((_,i)=>{const [x,y]=pt(i,val(i));return `<circle class="dot" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.5"/>`}).join("");
+  return `<div class="ovr"><strong>${r.pct}</strong><small>afinidad</small></div>
+   <div class="who"><b>${r.p.n}</b><span>${esc(r.p.kl)}${r.nd?` · ${r.nd} sin datos`:""}</span></div>
+   <svg class="hexsvg" viewBox="-20 0 340 300" role="img" aria-label="Hexágono de afinidad con ${r.p.n}: ${r.axes.map(a=>`${a.n} ${a.v??"sin respuestas"}`).join(", ")}">
+    ${rings}${spokes}<polygon class="shape" points="${poly(val)}"/>${dots}${labels}</svg>
+   <div class="stats">${r.axes.map(a=>`<div class="${a.v==null?"off":""}"><b>${a.v??"–"}</b><i>${a.ab}</i><span>${a.n}</span></div>`).join("")}</div>`;
 }
 function pill(){const {act}=tally();document.getElementById("pilln").textContent=act.length?`${act.length} de ${Object.keys(DATA.q).length} respondidas · ver resultado`:"marca tu postura en las preguntas";}
 document.getElementById("pill").addEventListener("click",()=>{
   const {act,max,rows}=tally();
   openSheet(`<h3 id="sheet-title" class="verdict">Tu brújula</h3>`+(act.length?
    `<p class="small">Coincidencia en ${act.length} ${act.length===1?"pregunta":"preguntas"} de todos los temas (máximo ${max} puntos). Las marcadas con estrella cuentan doble. Misma respuesta: punto entero; Parcial frente a Sí o No: medio punto; Sí frente a No y «No lo trata»: nada.</p>
-   <div class="res">${rows.map(r=>`<div class="bar"><b>${r.p.n}</b><div class="track"><div class="fill" style="width:${(100*r.pts/max).toFixed(0)}%"></div></div><span>${(+r.pts.toFixed(1)).toString().replace(".",",")}/${max}${r.nd?` · ${r.nd} s/d`:""}</span></div>`).join("")}</div>
+   ${FEATURES.hexBrujula?hexBlock(rows):`<div class="res">${rows.map(r=>`<div class="bar"><b>${r.p.n}</b><div class="track"><div class="fill" style="width:${(100*r.pts/max).toFixed(0)}%"></div></div><span>${(+r.pts.toFixed(1)).toString().replace(".",",")}/${max}${r.nd?` · ${r.nd} s/d`:""}</span></div>`).join("")}</div>`}
    <p class="small">«s/d»: preguntas que ese partido no trata. El Frente Amplio se mide con el programa de Sumar de 2023 y Podemos con su web de campaña, así que el resultado puede cambiar cuando publiquen el de 2026. No predice qué haría un gobierno.</p>`
    :`<p class="small">Marca Sí, Parcial o No en las preguntas de cualquier tema y vuelve aquí para ver con quién coincides más. Tus respuestas no salen de esta página.</p>`));
 });
+function hexBlock(rows){const best=rows.reduce((a,b)=>b.pct>a.pct?b:a);
+  return `<div class="res"><div class="ptabs" role="tablist" aria-label="Partido">${rows.map(r=>`<button type="button" class="ptab" role="tab" data-hex="${r.p.id}" aria-selected="${r===best}"><b>${r.p.ab}</b><span>${r.pct}</span></button>`).join("")}</div>
+   <div class="hexcard" id="hexcard" role="tabpanel">${hexCard(best)}</div>
+   <p class="small">Cada vértice es tu coincidencia (0–100) en un bloque de temas: VIV vivienda, SPU sanidad y educación, TRA empleo y pensiones, IMP impuestos, INM inmigración, CLI clima y energía. «–»: aún no has respondido preguntas de ese bloque.</p></div>`}
+sc.addEventListener("click",e=>{const b=e.target.closest("[data-hex]");if(!b)return;
+  const r=tally().rows.find(x=>x.p.id===b.dataset.hex);sc.querySelectorAll("[data-hex]").forEach(x=>x.setAttribute("aria-selected",x===b));
+  document.getElementById("hexcard").innerHTML=hexCard(r);});
 go(location.hash.slice(1)||"vivienda");pill();
 </script>
 
