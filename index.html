@@ -212,7 +212,7 @@ footer{display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--mut
 
 <footer>
   <p><b>Cómo se ha hecho.</b> Solo documentos de los propios partidos. «Sí» o «No» únicamente cuando el texto lo dice expresamente; «Parcial» cuando lo trata sin llegar a lo que pregunta la fila. Mismas preguntas y mismo número de propuestas para todos.</p>
-  <p><b>Limitaciones.</b> Los programas de 2023 pueden cambiar en 2026. Las páginas son las impresas y pueden variar en una. Un programa recoge promesas: lo que se apruebe dependerá de la mayoría y los pactos.</p>
+  <p><b>Limitaciones.</b> <span id="lim2023">Los programas de 2023 pueden cambiar en 2026. </span>Las páginas son las impresas y pueden variar en una. Un programa recoge promesas: lo que se apruebe dependerá de la mayoría y los pactos.</p>
   <p>Estado de los programas: <a href="https://quecambia.es/guia/29n#programas" target="_blank" rel="noopener">quecambia.es</a> y <a href="https://eleccionesenespana.es/programas/" target="_blank" rel="noopener">eleccionesenespana.es</a>.</p>
 </footer>
 </div>
@@ -246,6 +246,7 @@ document.getElementById("rev").innerHTML=`<span><b>Última revisión: ${fecha}.<
 document.getElementById("nota").textContent=META.notaFuentes;
 
 // rail
+if(!P.some(p=>p.k==="2023"))document.getElementById("lim2023")?.remove();
 document.getElementById("rail").innerHTML=P.map(p=>`<a class="src" href="${p.u}" target="_blank" rel="noopener"><span class="top">${tok(p,"","tabindex='-1' aria-hidden='true'")}<b>${p.n}</b></span><span class="kind k-${p.k}">${p.kl}${p.k==="2023"?" · provisional":""}</span><span class="t">${esc(p.t)}</span></a>`).join("");
 
 // dock
@@ -268,7 +269,7 @@ function render(){
   panel.innerHTML=`<div class="ph">${svg(T.id)}<h2>${T.n}</h2></div>
   <p class="howto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3.5 2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.8z"/></svg><span><b>Tu brújula.</b> Marca Sí o No en cada pregunta según tu opinión. Pulsa <b>Importante</b> en las que más te importan: cuentan el doble. El botón de abajo te muestra con quién coincides.</span></p>
   <div class="legend"><span>Toca un partido para ver qué dice y en qué página.</span>
-   <span>${tok(P.find(p=>p.k==="2026"),"","tabindex='-1' aria-hidden='true'")} programa 2026</span><span>${tok(P.find(p=>p.k==="2023"),"","tabindex='-1' aria-hidden='true'")} programa 2023, provisional</span><span>${tok(P.find(p=>p.k==="web"),"","tabindex='-1' aria-hidden='true'")} web de campaña</span></div>`+
+   ${[["2026","programa 2026"],["2023","programa 2023, provisional"],["web","web de campaña"]].filter(([k])=>P.some(p=>p.k===k)).map(([k,l])=>`<span>${tok(P.find(p=>p.k===k),"","tabindex='-1' aria-hidden='true'")} ${l}</span>`).join("")}</div>`+
   T.qs.map(qid=>{const q=DATA.q[qid];
     const by=v=>P.filter(p=>q.a[p.id][0]===v);
     const lane=(v,l)=>`<div class="lane l-${v}"><h4><i></i>${l}</h4><div class="toks">${by(v).map(p=>tok(p,"",`data-q="${qid}" data-p="${p.id}"`)).join("")}</div></div>`;
@@ -340,7 +341,7 @@ document.getElementById("pill").addEventListener("click",()=>{
   openSheet(`<h3 id="sheet-title" class="verdict">Tu brújula</h3>`+(act.length?
    `<p class="small">Coincidencia en ${act.length} ${act.length===1?"pregunta":"preguntas"} de todos los temas (máximo ${max} puntos). Las marcadas con estrella cuentan doble. Misma respuesta: punto entero; Parcial frente a Sí o No: medio punto; Sí frente a No y «No lo trata»: nada.</p>
    ${FEATURES.hexBrujula?hexBlock(rows):`<div class="res">${rows.map(r=>`<div class="bar"><b>${r.p.n}</b><div class="track"><div class="fill" style="width:${(100*r.pts/max).toFixed(0)}%"></div></div><span>${(+r.pts.toFixed(1)).toString().replace(".",",")}/${max}${r.nd?` · ${r.nd} s/d`:""}</span></div>`).join("")}</div>`}
-   <p class="small">«s/d»: preguntas que ese partido no trata. El Frente Amplio se mide con el programa de Sumar de 2023 y Podemos con su web de campaña, así que el resultado puede cambiar cuando publiquen el de 2026. No predice qué haría un gobierno.</p>`
+   <p class="small">«s/d»: preguntas que ese partido no trata. ${(n=>n.length?n.join(" y ")+`, así que el resultado puede cambiar cuando ${n.length>1?"publiquen":"publique"} el de 2026. `:"")(P.filter(p=>p.k!=="2026").map(p=>p.k==="2023"?`${p.n} se mide con el programa de ${p.id==="sum"?"Sumar":p.n} de 2023`:`${p.n} se mide con su web de campaña`))}No predice qué haría un gobierno.</p>`
    :`<p class="small">Marca Sí, Parcial o No en las preguntas de cualquier tema y vuelve aquí para ver con quién coincides más. Tus respuestas no salen de esta página.</p>`));
 });
 function hexBlock(rows){const best=rows.reduce((a,b)=>b.pct>a.pct?b:a);
