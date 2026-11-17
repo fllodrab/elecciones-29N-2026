@@ -2,19 +2,19 @@
 // El bloque tras «window.ELECCIONES=» es JSON estricto (lo comprueba scripts/validar.js).
 window.ELECCIONES={
  "meta": {
-  "revisado": "2026-11-16",
-  "estado": "Estado: incorporado el programa 2026 del PSOE («La fuerza de seguir avanzando», presentado el 15 de noviembre). Tienen programa 2026 PP, PSOE y Vox; Frente Amplio y Podemos siguen sin él.",
-  "notaFuentes": "PP, PSOE y Vox ya han publicado programa para el 29-N (el de Vox se enlaza desde la copia de Demócrata, porque la web de Vox no es accesible desde aquí). El Frente Amplio (Movimiento Sumar, IU, Más Madrid y Comuns) se estrena en 2026, así que se usa el programa de Sumar de 2023, su principal integrante, marcado en ámbar. Podemos no tiene programa propio desde 2023, cuando concurrió dentro de Sumar: se usa su web de campaña, con cinco medidas."
+  "revisado": "2026-11-17",
+  "estado": "Estado: incorporado el programa 2026 del Frente Amplio («Un programa como una casa», publicado el 16 de noviembre). Tienen programa 2026 Frente Amplio, PP, PSOE y Vox; Podemos sigue sin él.",
+  "notaFuentes": "Frente Amplio, PP, PSOE y Vox ya han publicado programa para el 29-N (el de Vox se enlaza ahora desde su web de campaña, votasentidocomun.es). Podemos no tiene programa propio desde 2023, cuando concurrió dentro de Sumar: se usa su web de campaña, con cinco medidas."
  },
  "parties": [
   {
    "id": "sum",
    "n": "Frente Amplio",
    "ab": "FA",
-   "k": "2023",
-   "kl": "Programa 2023",
-   "t": "Programa de Sumar 2023, «Un programa para ti» · 183 p. Movimiento Sumar, IU, Más Madrid y Comuns",
-   "u": "https://movimientosumar.es/wp-content/uploads/2023/07/Un-Programa-para-ti.pdf"
+   "k": "2026",
+   "kl": "Programa 2026",
+   "t": "«Un programa como una casa» · 151 p. Movimiento Sumar, IU, Más Madrid y Comuns",
+   "u": "https://frenteamplio.info/pdf/ProgramaFrenteAmplio.pdf"
   },
   {
    "id": "pod",
@@ -49,8 +49,8 @@ window.ELECCIONES={
    "ab": "VOX",
    "k": "2026",
    "kl": "Programa 2026",
-   "t": "«Es sentido común» · 55 p., 115 medidas. Copia de Demócrata",
-   "u": "https://www.democrata.es/uploads/s1/35/26/90/2/programa-elecct-vox.pdf"
+   "t": "«Es sentido común» · 55 p., 115 medidas",
+   "u": "https://votasentidocomun.es/general/files/programa-elecct-vox.pdf"
   }
  ],
  "topics": [
@@ -146,8 +146,8 @@ window.ELECCIONES={
     ],
     "sum": [
      "si",
-     "Aplicará la regulación de alquileres a todas las zonas de mercado tensionado y busca garantizar el control de alquileres en toda España; precios de referencia en zonas tensionadas fijados en el 30% de los ingresos del hogar inquilino.",
-     "77-79 (también 9)"
+     "Limitará por ley el alquiler en todas las zonas tensionadas: el techo será la cifra menor entre el 25% de la renta neta media por hogar de la sección censal y el índice SERPAVI, con una rebaja adicional del 30% en municipios de más de 200.000 habitantes o con masificación turística severa.",
+     "16"
     ],
     "vox": [
      "no",
@@ -176,8 +176,8 @@ window.ELECCIONES={
     ],
     "sum": [
      "na",
-     "No trata la okupación ni el desalojo de viviendas ocupadas; solo menciona vivienda alternativa frente a los desahucios y cita 'el fenómeno de la ocupación' como ejemplo de publicidad que alimenta la sensación de inseguridad.",
-     "77, 133"
+     "No trata la okupación ni el desalojo de viviendas ocupadas; sí prohíbe los desahucios de personas vulnerables sin alternativa habitacional.",
+     ""
     ],
     "vox": [
      "si",
@@ -206,8 +206,8 @@ window.ELECCIONES={
     ],
     "sum": [
      "si",
-     "Constituir en menos de diez años un parque de viviendas sociales y asequibles en alquiler de dos millones de inmuebles, con un gasto medio del 1% del PIB.",
-     "79 (también 76)"
+     "1,5 millones de viviendas públicas en 12 años (125.000 al año), hasta el 20% del parque total en 2035, con un 1% del PIB anual (unos 17.000 M€).",
+     "13 (también 9)"
     ],
     "vox": [
      "parcial",
@@ -236,8 +236,8 @@ window.ELECCIONES={
     ],
     "sum": [
      "si",
-     "El gasto sanitario público aumentará anualmente medio punto del PIB hasta igualar el promedio de los diez países europeos con mayor gasto; parte sustancial a atención primaria. No cuantifica plantillas.",
-     "89"
+     "Compromiso desde los Presupuestos Generales del Estado del 8% del PIB para la sanidad pública y el 25% del presupuesto sanitario para atención primaria; en salud mental, un mínimo de 10 profesionales por cada 100.000 habitantes.",
+     "30, 32"
     ],
     "vox": [
      "parcial",
@@ -266,8 +266,8 @@ window.ELECCIONES={
     ],
     "sum": [
      "si",
-     "Blindará el carácter público del SNS, impidiendo las formas de gestión privatizadas; también propone sacar a los funcionarios de las mutualidades/seguros privados colectivos.",
-     "89, 92"
+     "Ley de Gestión Pública del SNS con la gestión directa como vía general, derogación de la Ley 15/1997 (nuevas formas de gestión) e internalización paulatina de los servicios privatizados; la gestión indirecta, solo excepcional. También integra MUFACE, MUGEJU e ISFAS en el SNS.",
+     "30-31"
     ],
     "vox": [
      "no",
@@ -296,8 +296,8 @@ window.ELECCIONES={
     ],
     "sum": [
      "si",
-     "Propone incorporar a los servicios sanitarios públicos salud bucodental, óptica, audioprotésica, psicoterapia, entre otras, y un Plan de Choque en Salud Mental.",
-     "89-90"
+     "Cobertura bucodental hasta al menos el 50% de la población al final de la legislatura, gafas y lentillas gratuitas para todas las edades («Plan Veo»), audífonos en la cartera común y un fondo específico para la red de salud mental comunitaria.",
+     "31-32"
     ],
     "vox": [
      "parcial",
@@ -326,8 +326,8 @@ window.ELECCIONES={
     ],
     "sum": [
      "na",
-     "No propone derogar ni sustituir la LOMLOE; solo la cita de pasada ('cumpliendo la LOMLOE') en el apartado de educación en bienestar animal.",
-     "56"
+     "No menciona la LOMLOE ni propone derogarla o sustituirla; plantea una Ley de Financiación Educativa y ratios máximas por ley.",
+     ""
     ],
     "vox": [
      "si",
@@ -356,8 +356,8 @@ window.ELECCIONES={
     ],
     "sum": [
      "no",
-     "Suprimirá de forma inmediata los conciertos con centros que segregan por sexo o seleccionan alumnado y pide que la concertada sea realmente subsidiaria de la pública.",
-     "155"
+     "El objetivo es que el 100% de los fondos públicos vaya a la educación pública; mientras coexista la concertada, prohíbe las cuotas obligatorias, y elimina los conciertos con centros que segregan por sexo o por motivos religiosos.",
+     "35, 177"
     ],
     "vox": [
      "si",
@@ -386,8 +386,8 @@ window.ELECCIONES={
     ],
     "sum": [
      "si",
-     "Universalización de la cobertura pública gratuita de 0 a 3 años, con creación acelerada de plazas públicas hasta una cobertura del 90%.",
-     "9-10, 154"
+     "Universalizará la educación de 0 a 3 años con plazas públicas gratuitas garantizadas para toda familia solicitante y comedor gratuito en la red pública.",
+     "29 (también 9)"
     ],
     "vox": [
      "si",
@@ -416,8 +416,8 @@ window.ELECCIONES={
     ],
     "sum": [
      "si",
-     "En 2024 se establecerá por ley una jornada máxima de 37,5 horas semanales y se abrirá un proceso de diálogo hacia las 32 horas, sin reducción de salario.",
-     "7, 24"
+     "Jornada de 37,5 horas de forma inmediata en 2026 y 35 en el sector público, y reducción progresiva hasta las 32 horas semanales sin reducción salarial.",
+     "61"
     ],
     "vox": [
      "na",
@@ -445,9 +445,9 @@ window.ELECCIONES={
      "38"
     ],
     "sum": [
-     "parcial",
-     "Subirá el SMI por encima del IPC anual; recuerda que con 1.080 € ya se alcanzó el 60% del salario medio, pero no fija nueva cifra.",
-     "7, 26"
+     "si",
+     "Garantizará por ley una subida progresiva del SMI con un suelo permanente del 60% del salario medio neto.",
+     "57"
     ],
     "vox": [
      "na",
@@ -476,8 +476,8 @@ window.ELECCIONES={
     ],
     "sum": [
      "parcial",
-     "Régimen específico de cotización para autónomos con bajos ingresos: cotización fija bonificada sin pérdida de derechos cuando sus ingresos reales sean inferiores al SMI anual. No es una rebaja general.",
-     "29-30"
+     "Cotización fija bonificada, sin pérdida de derechos, para autónomos cuyos ingresos reales sean inferiores al SMI anual. No es una rebaja general de cuotas.",
+     "103"
     ],
     "vox": [
      "si",
@@ -506,8 +506,8 @@ window.ELECCIONES={
     ],
     "sum": [
      "si",
-     "Mantiene la actualización automática de las pensiones con el IPC; las mínimas y no contributivas subirán por encima del IPC hasta alcanzar al menos el umbral de pobreza.",
-     "15, 34"
+     "Llevará a la Constitución la revalorización automática de las pensiones con el IPC y que ninguna sea inferior al SMI.",
+     "63"
     ],
     "vox": [
      "na",
@@ -535,9 +535,9 @@ window.ELECCIONES={
      "41"
     ],
     "sum": [
-     "na",
-     "No modifica la edad legal de jubilación; solo menciona el derecho a la prolongación voluntaria de la vida laboral.",
-     "24"
+     "si",
+     "Devolverá la edad de jubilación a los 65 años y la reducirá en oficios penosos (construcción, limpieza, ayuda a domicilio, pesca…), que podrán jubilarse a los 60.",
+     "63-64"
     ],
     "vox": [
      "na",
@@ -565,9 +565,9 @@ window.ELECCIONES={
      "38-39; 50"
     ],
     "sum": [
-     "no",
-     "No baja el IRPF; añade tramos por encima de 120.000 € y sube el tipo marginal del 45% al 52% para rentas desde 300.000 €, y las rentas del capital hasta el 30%.",
-     "17"
+     "si",
+     "Bajará el IRPF a las rentas del trabajo de hasta 27.000 € (quien cobre el SMI no pagará IRPF); a la vez añade tramos desde 120.000 € y sube el tipo marginal hasta el 52% desde 300.000 €.",
+     "51"
     ],
     "vox": [
      "si",
@@ -596,8 +596,8 @@ window.ELECCIONES={
     ],
     "sum": [
      "si",
-     "Impuesto permanente a grandes fortunas de al menos el 4% para los mayores patrimonios; mantiene los impuestos extraordinarios a energéticas y entidades financieras hasta reformar Sociedades (mínimo efectivo del 15%).",
-     "16"
+     "Patrimonios de más de un millón de euros tributarán al menos un 2% y los de más de 50 millones un 3% (tasa Zucman); tipo mínimo efectivo del 20% en Sociedades para grandes grupos y gravámenes estructurales a energéticas (1,2% de la cifra de negocios) y banca.",
+     "49-50"
     ],
     "vox": [
      "na",
@@ -625,9 +625,9 @@ window.ELECCIONES={
      "39"
     ],
     "sum": [
-     "na",
-     "No trata el IVA de los alimentos; solo propone una cesta básica a precios asequibles sin detalle fiscal y un impuesto a bebidas azucaradas y ultraprocesados.",
-     "9, 17, 91"
+     "parcial",
+     "Bajará el IVA de bienes y servicios básicos de consumo general (sin gluten al 0%, pañales al superreducido) y propone IVA reducido o exento para alimentos ecológicos y de proximidad, pero no habla de los alimentos básicos en general.",
+     "52, 99"
     ],
     "vox": [
      "parcial",
@@ -656,8 +656,8 @@ window.ELECCIONES={
     ],
     "sum": [
      "parcial",
-     "Propone reformar la Ley de Extranjería para introducir un procedimiento de regularización permanente, no una regularización extraordinaria.",
-     "104-105"
+     "Se compromete a culminar la regularización extraordinaria de 2026 ya en marcha y a crear un procedimiento estable y permanente de regularización en la Ley de Extranjería; no plantea una nueva regularización extraordinaria.",
+     "149"
     ],
     "vox": [
      "no",
@@ -686,8 +686,8 @@ window.ELECCIONES={
     ],
     "sum": [
      "no",
-     "Garantiza el acceso universal al SNS a solicitantes de asilo y migrantes en situación irregular y extiende el ingreso mínimo a migrantes irregulares, sin priorizar por arraigo o nacionalidad.",
-     "86, 106"
+     "Blindará por ley la atención sanitaria universal con independencia del estatus administrativo y propone eliminar barreras de acceso a derechos (empadronamiento flexible, cuenta bancaria básica); no prioriza por arraigo ni nacionalidad.",
+     "30, 149"
     ],
     "vox": [
      "si",
@@ -716,8 +716,8 @@ window.ELECCIONES={
     ],
     "sum": [
      "no",
-     "Propone cerrar los CIE en todo el territorio y eliminar la disposición de la Ley de Extranjería que ampara las devoluciones sumarias en frontera.",
-     "106, 149"
+     "Cerrará los CIE, derogará el «rechazo en frontera» y prohíbe las devoluciones encubiertas; rechaza los centros de retorno en terceros países.",
+     "149-150"
     ],
     "vox": [
      "si",
@@ -746,8 +746,8 @@ window.ELECCIONES={
     ],
     "sum": [
      "no",
-     "Se compromete a mantener el calendario de cierre del parque nuclear y a una moratoria de nuevas iniciativas nucleares.",
-     "48"
+     "Cumplirá el calendario de cierre de las centrales nucleares.",
+     "71"
     ],
     "vox": [
      "si",
@@ -776,8 +776,8 @@ window.ELECCIONES={
     ],
     "sum": [
      "si",
-     "Objetivos para 2030: 55% de reducción de emisiones, 90% de renovables en generación eléctrica y 50% de electrificación; emisiones netas nulas en 2040.",
-     "41"
+     "Revisará al alza el PNIEC y la Ley de Cambio Climático: emisiones −38% en 2035 y −85% en 2040 respecto a 1990, neutralidad en 2050, y generación renovable del 81% en 2030, 90% en 2035 y 100% en 2040.",
+     "67"
     ],
     "vox": [
      "no",
@@ -853,24 +853,24 @@ window.ELECCIONES={
    ],
    "sum": [
     [
-     "Parque de dos millones de viviendas sociales y asequibles en alquiler en menos de diez años, con un gasto medio del 1% del PIB.",
-     "79",
+     "1% del PIB al año (unos 17.000 M€) para incorporar 1,5 millones de viviendas públicas en 12 años y llegar al 20% del parque en 2035.",
+     "13",
      true,
      true,
      true
     ],
     [
-     "Regulación de alquileres en todas las zonas tensionadas con precios de referencia del 30% de los ingresos del hogar y retirada de deducciones de IRPF al arrendador por encima de ese nivel.",
-     "77-78",
+     "Tope legal del alquiler en zonas tensionadas: el menor entre el 25% de la renta media del hogar de la sección censal y el índice SERPAVI, con un 30% más de rebaja en grandes ciudades y zonas turísticas.",
+     "16",
      true,
      false,
      false
     ],
     [
-     "Bono de emergencia de 1.000 € para hogares con hipoteca a tipo variable, financiado con el impuesto extraordinario a la banca.",
-     "8, 79",
+     "Ley de Expropiación de Viviendas a Propietarios Corporativos, por fases: tenedores de más de 1.000 viviendas, luego de más de 700 y después de más de 50.",
+     "13",
      true,
-     true,
+     false,
      false
     ]
    ],
@@ -956,25 +956,25 @@ window.ELECCIONES={
    ],
    "sum": [
     [
-     "Aumento anual del gasto sanitario público de medio punto del PIB hasta igualar la media de los diez países europeos que más gastan, reforzando la atención primaria.",
-     "89",
+     "8% del PIB para la sanidad pública desde los Presupuestos Generales del Estado y el 25% del gasto sanitario para atención primaria.",
+     "30",
+     true,
+     true,
+     false
+    ],
+    [
+     "Ley de Gestión Pública del SNS: gestión directa como regla, derogación de la Ley 15/1997 e internalización paulatina de servicios privatizados.",
+     "30",
      true,
      false,
      false
     ],
     [
-     "Incorporar a la cartera pública salud bucodental, óptica, audioprotésica, psicoterapia, fisioterapia y nutrición, y un Plan de Choque en Salud Mental.",
-     "89-90",
-     false,
-     false,
-     false
-    ],
-    [
-     "Crear una empresa farmacéutica pública que investigue, fabrique y comercialice medicamentos, terapias esenciales y vacunas.",
-     "91",
+     "Dentista público para al menos el 50% de la población al final de la legislatura, gafas y lentillas gratuitas para todas las edades y audífonos en la cartera común.",
+     "31",
      true,
      false,
-     false
+     true
     ]
    ],
    "vox": [
@@ -1059,23 +1059,23 @@ window.ELECCIONES={
    ],
    "sum": [
     [
-     "Universalizar la cobertura pública gratuita de 0 a 3 años con plazas públicas hasta el 90% de cobertura.",
-     "9-10, 154",
+     "Ley de Financiación Educativa que blinde un suelo de gasto público que llegue al 7% del PIB en 2030.",
+     "35",
+     true,
+     true,
+     true
+    ],
+    [
+     "Educación de 0 a 3 años universal, con plazas públicas gratuitas para toda familia que la pida, comedor gratuito y ratios de 4, 6 y 8 niños por educador según la edad.",
+     "29",
      true,
      false,
      false
     ],
     [
-     "Suprimir de forma inmediata los conciertos con centros que segregan por sexo o seleccionan alumnado.",
-     "155",
+     "Ratios máximas por ley (15 en Primaria y FP, 20 en Secundaria, 23 en Bachillerato) y un máximo de 18 horas lectivas en Secundaria y de 23 en Infantil y Primaria.",
+     "35-36",
      true,
-     false,
-     true
-    ],
-    [
-     "Plan contra el calor en los centros educativos ('Centros educativos contra la crisis climática') y plan de salud mental en los centros.",
-     "158",
-     false,
      false,
      false
     ]
@@ -1169,22 +1169,22 @@ window.ELECCIONES={
    ],
    "sum": [
     [
-     "Jornada máxima legal de 37,5 horas semanales en 2024 y diálogo social hacia 32 horas sin reducción salarial.",
-     "7, 24",
+     "Jornada de 37,5 horas de forma inmediata en 2026 (35 en el sector público) y reducción progresiva hasta 32 horas sin bajar el salario.",
+     "61",
      true,
      false,
      true
     ],
     [
-     "Subir el SMI por encima del IPC anual.",
-     "7",
+     "Suelo legal del SMI equivalente al 60% del salario medio neto, sin que pueda absorberse con complementos.",
+     "57",
      true,
      false,
      false
     ],
     [
-     "Cotización fija bonificada para autónomos cuyos ingresos reales sean inferiores al SMI anual, sin pérdida de protección.",
-     "29-30",
+     "Cotización fija bonificada para autónomos con ingresos inferiores al SMI y exención de liquidaciones periódicas de IVA si facturan menos de 85.000 € al año.",
+     "103",
      true,
      false,
      false
@@ -1264,24 +1264,24 @@ window.ELECCIONES={
    ],
    "sum": [
     [
-     "Revalorización automática de las pensiones con el IPC, fijada por ley.",
-     "15, 34",
+     "Reforma constitucional para blindar la revalorización con el IPC y que ninguna pensión sea inferior al SMI.",
+     "63",
      true,
      false,
      false
     ],
     [
-     "Subir las pensiones mínimas y no contributivas por encima del IPC hasta alcanzar al menos el umbral de pobreza.",
-     "15",
+     "Edad de jubilación de nuevo a los 65 años y a los 60 en oficios de especial penosidad.",
+     "63-64",
      true,
      false,
      false
     ],
     [
-     "Mejorar las fuentes de financiación del sistema (nuevos mecanismos y más cotizantes) para no ajustar vía recortes de prestaciones.",
-     "15, 35",
-     false,
+     "Eliminar los coeficientes reductores en la jubilación anticipada involuntaria de quienes han cotizado más de 40 años.",
+     "64",
      true,
+     false,
      false
     ]
    ],
@@ -1359,22 +1359,22 @@ window.ELECCIONES={
    ],
    "sum": [
     [
-     "Impuesto permanente a las grandes fortunas con un tipo de al menos el 4% para los mayores patrimonios, que financiaría una herencia universal de 20.000 € a los 23 años.",
-     "15-16",
-     true,
-     true,
-     false
-    ],
-    [
-     "IRPF: más tramos por encima de 120.000 € y tipo marginal del 52% desde 300.000 €; rentas del capital hasta el 30%.",
-     "17",
+     "Mínimo del 2% para patrimonios de más de un millón de euros y tasa Zucman del 3% anual sobre los de más de 50 millones, que financiará la Prestación Universal por Crianza.",
+     "50",
      true,
      false,
      false
     ],
     [
-     "Tipo mínimo efectivo del 15% en Sociedades y mantenimiento de los impuestos extraordinarios a energéticas y financieras hasta completar la reforma.",
-     "16",
+     "Tipo mínimo efectivo del 20% en Sociedades para grandes grupos, gravamen estructural del 1,2% a las grandes energéticas y gravamen bancario permanente.",
+     "49",
+     true,
+     false,
+     false
+    ],
+    [
+     "Bajar el IRPF a las rentas del trabajo de hasta 27.000 € y subir el marginal hasta el 52% desde 300.000 €.",
+     "51",
      true,
      false,
      false
@@ -1454,25 +1454,25 @@ window.ELECCIONES={
    ],
    "sum": [
     [
-     "Reformar la Ley de Extranjería para introducir un procedimiento de regularización permanente.",
-     "104-105",
+     "Culminar la regularización extraordinaria de 2026 y crear en la Ley de Extranjería un procedimiento estable y permanente de regularización.",
+     "149",
      true,
      false,
      false
     ],
     [
-     "Cierre de los Centros de Internamiento de Extranjeros (CIE) en todo el territorio.",
-     "106",
+     "Cerrar los CIE y derogar la disposición de la Ley de Extranjería sobre el «rechazo en frontera».",
+     "149-150",
      true,
      false,
      false
     ],
     [
-     "Garantizar el acceso universal al SNS a solicitantes de asilo y migrantes en situación irregular, y sistematizar el asilo por vía diplomática en embajadas y consulados.",
-     "105-106",
+     "Cita en las oficinas de extranjería en un máximo de siete días y reagrupación familiar resuelta en tres meses, con silencio positivo.",
+     "149, 151",
      true,
      false,
-     false
+     true
     ]
    ],
    "vox": [
@@ -1557,25 +1557,25 @@ window.ELECCIONES={
    ],
    "sum": [
     [
-     "Objetivos 2030: 55% de reducción de emisiones, 90% de renovables en la generación eléctrica y 50% de electrificación de la demanda; emisiones netas nulas en 2040.",
-     "41",
+     "Destinar por ley el 3,5% del PIB anual a la transición ecológica.",
+     "67",
+     true,
+     true,
+     false
+    ],
+    [
+     "Emisiones −38% en 2035 y −85% en 2040 (sobre 1990), neutralidad en 2050 y generación eléctrica 100% renovable en 2040.",
+     "67",
      true,
      false,
      true
     ],
     [
-     "Mantener el calendario de cierre nuclear y moratoria a nuevas iniciativas nucleares.",
-     "48",
+     "Tres horas de luz gratis al día en la franja solar para todos los hogares, pagadas con el gravamen a las grandes energéticas.",
+     "71",
      true,
      false,
-     true
-    ],
-    [
-     "Rehabilitar 500.000 viviendas al año (100% eléctricas), reduciendo su demanda energética un 50%.",
-     "10, 41, 47",
-     true,
-     false,
-     true
+     false
     ]
    ],
    "vox": [
