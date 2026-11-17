@@ -221,8 +221,8 @@ footer{display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--mut
 
 <dialog id="sheet" aria-labelledby="sheet-title"><div class="sheet" id="sheetc"></div></dialog>
 
-<script src="data.js"></script>
 <script>
+window.app=()=>{
 const {meta:META,parties:P,...DATA}=window.ELECCIONES;
 const ICON={
  vivienda:'<path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9.5h13V10"/><path d="M10 19.5v-5h4v5"/>',
@@ -352,6 +352,12 @@ sc.addEventListener("click",e=>{const b=e.target.closest("[data-hex]");if(!b)ret
   const r=tally().rows.find(x=>x.p.id===b.dataset.hex);sc.querySelectorAll("[data-hex]").forEach(x=>x.setAttribute("aria-selected",x===b));
   document.getElementById("hexcard").innerHTML=hexCard(r);});
 go(location.hash.slice(1)||"vivienda");pill();
+};
+// Carga data.js con una marca de tiempo en la URL para que el navegador no use una copia antigua tras una actualización.
+(()=>{const s=document.createElement("script");s.src="data.js?v="+Math.floor(Date.now()/60000);
+  s.onload=()=>window.app();
+  s.onerror=()=>{document.getElementById("panel").innerHTML='<p class="howto">No se han podido cargar los datos. Recarga la página.</p>'};
+  document.head.appendChild(s);})();
 </script>
 
 
