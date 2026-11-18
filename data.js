@@ -2,8 +2,8 @@
 // El bloque tras «window.ELECCIONES=» es JSON estricto (lo comprueba scripts/validar.js).
 window.ELECCIONES={
  "meta": {
-  "revisado": "2026-11-17",
-  "estado": "Estado: incorporado el programa 2026 del Frente Amplio («Un programa como una casa», publicado el 16 de noviembre). Tienen programa 2026 Frente Amplio, PP, PSOE y Vox; Podemos sigue sin él.",
+  "revisado": "2026-11-18",
+  "estado": "Estado: incorporada la versión revisada del programa del Frente Amplio («Un programa como una casa», actualizada el 17 de noviembre). Tienen programa 2026 Frente Amplio, PP, PSOE y Vox; Podemos sigue sin él.",
   "notaFuentes": "Frente Amplio, PP, PSOE y Vox ya han publicado programa para el 29-N (el de Vox se enlaza ahora desde su web de campaña, votasentidocomun.es). Podemos no tiene programa propio desde 2023, cuando concurrió dentro de Sumar: se usa su web de campaña, con cinco medidas."
  },
  "parties": [
@@ -417,7 +417,7 @@ window.ELECCIONES={
     "sum": [
      "si",
      "Jornada de 37,5 horas de forma inmediata en 2026 y 35 en el sector público, y reducción progresiva hasta las 32 horas semanales sin reducción salarial.",
-     "61"
+     "61-62"
     ],
     "vox": [
      "na",
@@ -476,7 +476,7 @@ window.ELECCIONES={
     ],
     "sum": [
      "parcial",
-     "Cotización fija bonificada, sin pérdida de derechos, para autónomos cuyos ingresos reales sean inferiores al SMI anual. No es una rebaja general de cuotas.",
+     "Mantendrá la tarifa plana de 88 euros mientras los ingresos reales del autónomo sean inferiores al SMI anual (hoy se pierde a los dos años), sin pérdida de derechos. No es una rebaja general de cuotas.",
      "103"
     ],
     "vox": [
@@ -537,7 +537,7 @@ window.ELECCIONES={
     "sum": [
      "si",
      "Devolverá la edad de jubilación a los 65 años y la reducirá en oficios penosos (construcción, limpieza, ayuda a domicilio, pesca…), que podrán jubilarse a los 60.",
-     "63-64"
+     "64"
     ],
     "vox": [
      "na",
@@ -1170,7 +1170,7 @@ window.ELECCIONES={
    "sum": [
     [
      "Jornada de 37,5 horas de forma inmediata en 2026 (35 en el sector público) y reducción progresiva hasta 32 horas sin bajar el salario.",
-     "61",
+     "62",
      true,
      false,
      true
@@ -1183,7 +1183,7 @@ window.ELECCIONES={
      false
     ],
     [
-     "Cotización fija bonificada para autónomos con ingresos inferiores al SMI y exención de liquidaciones periódicas de IVA si facturan menos de 85.000 € al año.",
+     "Tarifa plana de 88 euros mientras se ingrese menos del SMI y opción de quedar exentos de las liquidaciones trimestrales de IVA si facturan menos de 85.000 € al año.",
      "103",
      true,
      false,
@@ -1272,7 +1272,7 @@ window.ELECCIONES={
     ],
     [
      "Edad de jubilación de nuevo a los 65 años y a los 60 en oficios de especial penosidad.",
-     "63-64",
+     "64",
      true,
      false,
      false
