@@ -2,9 +2,9 @@
 // El bloque tras «window.ELECCIONES=» es JSON estricto (lo comprueba scripts/validar.js).
 window.ELECCIONES={
  "meta": {
-  "revisado": "2026-11-18",
-  "estado": "Estado: incorporada la versión revisada del programa del Frente Amplio («Un programa como una casa», actualizada el 17 de noviembre). Tienen programa 2026 Frente Amplio, PP, PSOE y Vox; Podemos sigue sin él.",
-  "notaFuentes": "Frente Amplio, PP, PSOE y Vox ya han publicado programa para el 29-N (el de Vox se enlaza ahora desde su web de campaña, votasentidocomun.es). Podemos no tiene programa propio desde 2023, cuando concurrió dentro de Sumar: se usa su web de campaña, con cinco medidas."
+  "revisado": "2026-11-19",
+  "estado": "Estado: incorporado el programa de Podemos («Así de básico: paz, casa y trabajo», publicado el 18 de noviembre). Los cinco partidos tienen ya programa 2026.",
+  "notaFuentes": "Los cinco partidos han publicado programa para el 29-N: Frente Amplio, PP, PSOE, Vox (enlazado desde su web de campaña, votasentidocomun.es) y Podemos (desde la web de su candidatura, pazcasaytrabajo.es)."
  },
  "parties": [
   {
@@ -20,10 +20,10 @@ window.ELECCIONES={
    "id": "pod",
    "n": "Podemos",
    "ab": "POD",
-   "k": "web",
-   "kl": "Web de campaña",
-   "t": "«Paz, casa y trabajo», web de Irene Montero (5 medidas)",
-   "u": "https://pazcasaytrabajo.es/"
+   "k": "2026",
+   "kl": "Programa 2026",
+   "t": "«Así de básico: paz, casa y trabajo» · 141 p., 442 medidas",
+   "u": "https://pazcasaytrabajo.es/programa-electoral/programa-electoral-paz-casa-y-trabajo.pdf"
   },
   {
    "id": "pp",
@@ -131,9 +131,9 @@ window.ELECCIONES={
    "x": "Se refiere a poner por ley un tope a lo que se puede cobrar por un alquiler. La Ley de Vivienda de 2023 permite limitar las subidas en las «zonas tensionadas» que declaran las comunidades autónomas.",
    "a": {
     "pod": [
-     "na",
-     "La web dice que la vivienda no puede ser un negocio y que los precios deben ser justos y no llevarse la mayor parte del salario, pero no menciona el alquiler ni un límite legal de precios.",
-     "web"
+     "si",
+     "Bajará por ley un 40% el precio de todos los alquileres, vigentes y nuevos, sin bajar del 60% del precio medio de la zona; si la vivienda nunca se alquiló, el precio inicial será el 60% del medio (medida 1).",
+     "8"
     ],
     "pp": [
      "no",
@@ -162,9 +162,9 @@ window.ELECCIONES={
    "x": "La «okupación» es entrar a vivir en una vivienda sin permiso de su dueño. La fila mira si se proponen procedimientos más rápidos para que el propietario la recupere, por ejemplo en 24 o 48 horas.",
    "a": {
     "pod": [
-     "na",
-     "No lo trata.",
-     "web"
+     "no",
+     "Al contrario: prohíbe los desalojos extrajudiciales, persigue el acoso inmobiliario y propone ilegalizar las empresas de desokupación; ningún desalojo fuera de los procedimientos judiciales (medida 6).",
+     "9"
     ],
     "pp": [
      "si",
@@ -193,9 +193,9 @@ window.ELECCIONES={
    "x": "La vivienda pública o social la construye o gestiona la Administración para alquilarla o venderla por debajo del precio de mercado. La fila mira si el programa da una cifra concreta: número de viviendas o dinero.",
    "a": {
     "pod": [
-     "na",
-     "No da ninguna cifra de vivienda pública o social.",
-     "web"
+     "parcial",
+     "Amplía el parque público por tanteo y retracto, compra pública y expropiación de uso a grandes tenedores, y reserva al menos el 50% de las nuevas viviendas de los planes urbanísticos al alquiler social, pero no da un número de viviendas públicas ni una cantidad de dinero (medidas 4 y 16).",
+     "8-11"
     ],
     "pp": [
      "parcial",
@@ -224,9 +224,9 @@ window.ELECCIONES={
    "x": "La fila mira si el programa pone números a la mejora de la sanidad pública: cuántos profesionales más, qué parte del PIB o cuánto dinero.",
    "a": {
     "pod": [
-     "parcial",
-     "Pide sanidad pública con recursos suficientes y más profesionales mejor pagados, financiado con el dinero que se gasta en armas, pero sin cifras.",
-     "web"
+     "si",
+     "Subirá la financiación sanitaria hasta al menos 2.900 euros por habitante y año (en torno al 8% del PIB), con un mínimo del 25% del presupuesto para Atención Primaria; en salud mental, 18 psiquiatras, 18 psicólogos clínicos y 23 enfermeras especialistas por cada 100.000 habitantes (medidas 302 y 306).",
+     "89, 91"
     ],
     "pp": [
      "si",
@@ -255,9 +255,9 @@ window.ELECCIONES={
    "x": "Parte de la sanidad pública la prestan empresas privadas mediante conciertos o concesiones (hospitales, pruebas, operaciones). La fila mira si se propone reducir o limitar esa gestión privada.",
    "a": {
     "pod": [
-     "na",
-     "No lo trata.",
-     "web"
+     "si",
+     "Derogará la Ley 15/1997, blindará la gestión pública directa como modelo obligatorio y prohibirá externalizar o privatizar centros y servicios; recuperará los privatizados al vencer los contratos (medida 300).",
+     "88"
     ],
     "pp": [
      "na",
@@ -286,9 +286,9 @@ window.ELECCIONES={
    "x": "Hoy la sanidad pública cubre de forma limitada el dentista, las gafas, los audífonos o el psicólogo. La fila mira si se propone incluirlos o ampliarlos.",
    "a": {
     "pod": [
-     "na",
-     "No lo trata.",
-     "web"
+     "si",
+     "Cobertura del 100% en salud bucodental (empastes, ortodoncias, prótesis…), oftalmológica, auditiva, fisioterapia y psicológica, y atención psicológica pública universal y gratuita (medidas 306 y 307).",
+     "91"
     ],
     "pp": [
      "parcial",
@@ -317,9 +317,9 @@ window.ELECCIONES={
    "x": "La LOMLOE, conocida como «ley Celaá», es la ley de educación vigente, aprobada en 2020. La fila mira si el programa propone derogarla o sustituirla por otra.",
    "a": {
     "pod": [
-     "na",
-     "No lo trata.",
-     "web"
+     "parcial",
+     "Propone una nueva ley general de educación (Ley de Calidad de la Educación) con estándares mínimos obligatorios, pero no menciona la LOMLOE ni dice que la derogue o la sustituya (medida 278).",
+     "78-79"
     ],
     "pp": [
      "si",
@@ -348,9 +348,9 @@ window.ELECCIONES={
    "x": "Los colegios concertados son privados pero se pagan con dinero público. La «elección de centro» es la libertad de las familias para escoger colegio. La fila mira si se propone ampliar una cosa u otra.",
    "a": {
     "pod": [
-     "na",
-     "No lo trata.",
-     "web"
+     "no",
+     "Al contrario: moratoria indefinida a nuevos conciertos y centros privados, integración progresiva y voluntaria de la concertada en la red pública y prohibición de cuotas en los concertados (medida 279).",
+     "79"
     ],
     "pp": [
      "si",
@@ -379,9 +379,9 @@ window.ELECCIONES={
    "x": "La etapa de 0 a 3 años (guardería o escuela infantil) no es obligatoria y en muchos sitios es de pago. La fila mira si se propone que sea gratis.",
    "a": {
     "pod": [
-     "na",
-     "No lo trata.",
-     "web"
+     "si",
+     "Construirá en un máximo de cuatro años todas las plazas públicas necesarias para una educación de 0 a 3 años universal, gratuita y de gestión pública directa (medida 281).",
+     "80"
     ],
     "pp": [
      "si",
@@ -411,8 +411,8 @@ window.ELECCIONES={
    "a": {
     "pod": [
      "si",
-     "Jornada laboral de 30 horas semanales.",
-     "web"
+     "Jornada de 30 horas semanales durante la legislatura, empezando por 35, sin reducir el salario y con posibilidad de semana de cuatro días (medida 113).",
+     "41"
     ],
     "pp": [
      "na",
@@ -442,8 +442,8 @@ window.ELECCIONES={
    "a": {
     "pod": [
      "si",
-     "1.800 euros de salario mínimo por ley.",
-     "web"
+     "Salario mínimo de 1.800 euros al mes en una legislatura y, por ley, nunca inferior al 75% del salario mediano (medida 111).",
+     "41"
     ],
     "pp": [
      "na",
@@ -472,9 +472,9 @@ window.ELECCIONES={
    "x": "Los autónomos pagan cada mes una cuota a la Seguridad Social que depende de sus ingresos. La fila mira si se propone rebajarla.",
    "a": {
     "pod": [
-     "na",
-     "No lo trata.",
-     "web"
+     "parcial",
+     "Cotización de los autónomos como porcentaje progresivo del beneficio, que sería cero con pérdidas y más alta con beneficios millonarios; no plantea una rebaja general de cuotas (medida 64).",
+     "23"
     ],
     "pp": [
      "si",
@@ -504,8 +504,8 @@ window.ELECCIONES={
    "a": {
     "pod": [
      "na",
-     "No lo trata.",
-     "web"
+     "No trata la revalorización con el IPC; propone que la pensión mínima contributiva se iguale al SMI y la no contributiva sea el 80% del SMI (medida 127).",
+     "44"
     ],
     "pp": [
      "si",
@@ -534,9 +534,9 @@ window.ELECCIONES={
    "x": "La edad legal de jubilación sube de forma gradual hasta los 67 años en 2027. La fila mira si el programa propone cambiarla, para adelantarla o retrasarla.",
    "a": {
     "pod": [
-     "na",
-     "No lo trata.",
-     "web"
+     "si",
+     "Adelantará la edad ordinaria de jubilación a los 63 años, con financiación de los Presupuestos Generales del Estado (medida 116).",
+     "41"
     ],
     "pp": [
      "na",
@@ -565,9 +565,9 @@ window.ELECCIONES={
    "x": "El IRPF es el impuesto sobre la renta: lo que se paga cada año por el sueldo y otros ingresos. La fila mira si se propone bajarlo, en general o para algunos grupos.",
    "a": {
     "pod": [
-     "na",
-     "No lo trata.",
-     "web"
+     "si",
+     "Bajará el tipo mínimo estatal del IRPF del 9,5% al 9% y quien cobre menos del SMI no tributará; a la vez sube los tipos desde 60.000 euros y equipara las rentas del capital a las del trabajo (medidas 48 y 49).",
+     "21"
     ],
     "pp": [
      "si",
@@ -596,9 +596,9 @@ window.ELECCIONES={
    "x": "Se refiere a impuestos especiales sobre los patrimonios más grandes y a gravámenes sobre los beneficios de bancos y empresas energéticas. La fila mira si se propone crearlos o subirlos.",
    "a": {
     "pod": [
-     "na",
-     "No menciona impuestos; solo habla de recuperar poder adquisitivo frente a quienes tienen beneficios sin límite.",
-     "web"
+     "si",
+     "Impuesto estatal permanente a las grandes fortunas, impuesto permanente a la gran banca para que al menos el 50% de sus beneficios extraordinarios vaya a las arcas públicas y recuperar los beneficios extra de eléctricas y petroleras (medidas 30 y 31).",
+     "17"
     ],
     "pp": [
      "na",
@@ -628,8 +628,8 @@ window.ELECCIONES={
    "a": {
     "pod": [
      "na",
-     "No lo trata; solo dice que hay que bajar el coste de la vida.",
-     "web"
+     "No propone bajar el IVA de los alimentos; para abaratarlos plantea topes a los márgenes de las grandes distribuidoras (medida 35). Sí rebaja el IVA de peluquerías, productos veterinarios, espectáculos y productos menstruales (medidas 42-45).",
+     "18, 20"
     ],
     "pp": [
      "si",
@@ -658,9 +658,9 @@ window.ELECCIONES={
    "x": "Una regularización extraordinaria da permiso de residencia y trabajo, de una vez, a personas extranjeras que viven en España sin papeles y cumplen ciertos requisitos. La fila mira si se propone.",
    "a": {
     "pod": [
-     "na",
-     "No lo trata; solo dice que España tiene que ser un refugio, dentro de la medida sobre la paz.",
-     "web"
+     "parcial",
+     "Propone un procedimiento permanente de regularización que reconozca el arraigo social, familiar y comunitario sin exigir contrato de trabajo; no plantea una nueva regularización extraordinaria (medidas 210 y 211).",
+     "67"
     ],
     "pp": [
      "no",
@@ -689,9 +689,9 @@ window.ELECCIONES={
    "x": "Se refiere a dar preferencia en ayudas, vivienda pública u otros servicios según los años de residencia en España («arraigo») o la nacionalidad.",
    "a": {
     "pod": [
-     "na",
-     "No lo trata.",
-     "web"
+     "no",
+     "Sanidad y servicios sociales universales para todas las personas que viven en España, también en situación irregular, y DNI y derecho al voto para quien vive y trabaja en España; no prioriza por arraigo ni nacionalidad (medidas 207 y 216).",
+     "65-69"
     ],
     "pp": [
      "si",
@@ -720,9 +720,9 @@ window.ELECCIONES={
    "x": "Se refiere a facilitar o ampliar la expulsión de extranjeros en situación irregular o que cometen delitos.",
    "a": {
     "pod": [
-     "na",
-     "No lo trata.",
-     "web"
+     "no",
+     "Al contrario: derogará la Ley de Extranjería, acabará con las devoluciones en caliente y cerrará todos los CIE (medidas 205 y 206).",
+     "65"
     ],
     "pp": [
      "si",
@@ -751,9 +751,9 @@ window.ELECCIONES={
    "x": "España tiene un calendario para cerrar sus centrales nucleares entre 2027 y 2035. La fila mira si se propone mantenerlas abiertas más tiempo.",
    "a": {
     "pod": [
-     "na",
-     "No lo trata.",
-     "web"
+     "no",
+     "Cumplirá el calendario de cierre de las centrales nucleares, empezando por Almaraz: «ni prórrogas nucleares indefinidas» (medida 339).",
+     "103"
     ],
     "pp": [
      "si",
@@ -782,9 +782,9 @@ window.ELECCIONES={
    "x": "España y la Unión Europea tienen objetivos para reducir emisiones y aumentar las renovables, con fechas como 2030 y 2050. La fila mira si se propone ser más ambicioso o ir más rápido.",
    "a": {
     "pod": [
-     "na",
-     "Solo menciona la lucha contra el cambio climático, sin objetivos ni plazos.",
-     "web"
+     "si",
+     "Reformará la Ley de Cambio Climático: emisiones −55% en 2030 respecto a 1990 (con la ambición del 65%) y neutralidad climática adelantada a 2040; al menos un 95% de electricidad renovable en 2035 (medidas 316 y 328).",
+     "94-95, 98"
     ],
     "pp": [
      "no",
@@ -813,16 +813,23 @@ window.ELECCIONES={
   "vivienda": {
    "pod": [
     [
-     "Que nadie que quiera especular pueda comprar una vivienda en España, porque la vivienda no puede ser un negocio.",
-     "web",
-     false,
+     "Bajar por ley un 40% todos los alquileres, vigentes y nuevos, sin bajar del 60% del precio medio de la zona.",
+     "8",
+     true,
      false,
      false
     ],
     [
-     "Precios de la vivienda justos que no se lleven la mayor parte del salario.",
-     "web",
+     "Prohibir comprar viviendas que no sean para residencia habitual o segunda residencia propia, con cuatro años de uso obligatorio.",
+     "8",
+     true,
      false,
+     false
+    ],
+    [
+     "Expropiación de uso de las viviendas de grandes tenedores a partir de diez (unas 626.000) para destinarlas al alquiler social.",
+     "8",
+     true,
      false,
      false
     ]
@@ -923,10 +930,24 @@ window.ELECCIONES={
   "sanidad": {
    "pod": [
     [
-     "Sanidad pública con recursos suficientes y más profesionales mejor pagados, financiado con el dinero que se gasta en armas.",
-     "web",
-     false,
+     "Financiación sanitaria de al menos 2.900 € por habitante y año (en torno al 8% del PIB) y un mínimo del 25% del presupuesto para Atención Primaria.",
+     "89",
      true,
+     true,
+     false
+    ],
+    [
+     "Derogar la Ley 15/1997 y prohibir la externalización y privatización de centros y servicios sanitarios.",
+     "88",
+     true,
+     false,
+     false
+    ],
+    [
+     "Cobertura del 100% en dentista, oftalmología, audición, fisioterapia y psicología, y copago farmacéutico según la renta.",
+     "91",
+     true,
+     false,
      false
     ]
    ],
@@ -1026,10 +1047,24 @@ window.ELECCIONES={
   "educacion": {
    "pod": [
     [
-     "Educación pública con recursos suficientes y más profesionales mejor pagados, financiado con el dinero que se gasta en armas.",
-     "web",
-     false,
+     "Inversión pública en educación del 7% del PIB durante la legislatura.",
+     "80",
      true,
+     true,
+     true
+    ],
+    [
+     "Plazas públicas gratuitas de 0 a 3 años para todas las familias en un máximo de cuatro años.",
+     "80",
+     true,
+     false,
+     true
+    ],
+    [
+     "Moratoria indefinida a nuevos conciertos y centros privados e integración voluntaria y progresiva de la concertada en la red pública.",
+     "79",
+     true,
+     false,
      false
     ]
    ],
@@ -1129,15 +1164,22 @@ window.ELECCIONES={
   "empleo": {
    "pod": [
     [
-     "Salario mínimo de 1.800 euros fijado por ley.",
-     "web",
+     "Salario mínimo de 1.800 euros al mes en una legislatura y nunca por debajo del 75% del salario mediano.",
+     "41",
      true,
      false,
-     false
+     true
     ],
     [
-     "Jornada laboral de 30 horas semanales.",
-     "web",
+     "Jornada de 30 horas semanales durante la legislatura, empezando por 35, sin bajar el salario.",
+     "41",
+     true,
+     false,
+     true
+    ],
+    [
+     "Cotización de los autónomos como porcentaje progresivo del beneficio, cero si hay pérdidas.",
+     "23",
      true,
      false,
      false
@@ -1237,7 +1279,29 @@ window.ELECCIONES={
    ]
   },
   "pensiones": {
-   "pod": [],
+   "pod": [
+    [
+     "Adelantar la edad ordinaria de jubilación a los 63 años, con cargo a los Presupuestos Generales del Estado.",
+     "41",
+     true,
+     false,
+     false
+    ],
+    [
+     "Pensión mínima contributiva igual al SMI y no contributiva del 80% del SMI.",
+     "44",
+     true,
+     false,
+     false
+    ],
+    [
+     "Eliminar, también para las pensiones ya reconocidas, las penalizaciones por jubilación anticipada con 40 años o más cotizados.",
+     "41",
+     true,
+     false,
+     false
+    ]
+   ],
    "pp": [
     [
      "Reconstruir el Pacto de Toledo, revalorizar las pensiones con el IPC cada año y deducción en IRPF por jubilación activa. (medida 108)",
@@ -1332,7 +1396,29 @@ window.ELECCIONES={
    ]
   },
   "impuestos": {
-   "pod": [],
+   "pod": [
+    [
+     "Impuesto estatal y permanente a las grandes fortunas, con las mismas características que el de Patrimonio.",
+     "17",
+     true,
+     false,
+     false
+    ],
+    [
+     "Impuesto permanente a la gran banca para que al menos el 50% de sus beneficios extraordinarios vaya a las arcas públicas.",
+     "17",
+     true,
+     false,
+     false
+    ],
+    [
+     "IRPF: tipo mínimo del 9,5% al 9%, sin tributar por debajo del SMI, y tipos más altos desde 60.000 €.",
+     "21",
+     true,
+     false,
+     false
+    ]
+   ],
    "pp": [
     [
      "IRPF para jóvenes de 18 a 35 años: reducción del 100 %, 75 %, 50 % y 25 % en sus cuatro primeros años. (medida 179)",
@@ -1427,7 +1513,29 @@ window.ELECCIONES={
    ]
   },
   "inmigracion": {
-   "pod": [],
+   "pod": [
+    [
+     "Derogar la Ley de Extranjería y aprobar una ley integral basada en derechos, sin devoluciones en caliente.",
+     "65",
+     true,
+     false,
+     false
+    ],
+    [
+     "Cerrar todos los Centros de Internamiento de Extranjeros (CIE).",
+     "65",
+     true,
+     false,
+     false
+    ],
+    [
+     "Procedimiento permanente de regularización por arraigo social, familiar y comunitario, sin exigir contrato de trabajo.",
+     "67",
+     true,
+     false,
+     false
+    ]
+   ],
    "pp": [
     [
      "Prohibir por ley las regularizaciones masivas; el empadronamiento no bastará para ayudas no urgentes. (medida 42)",
@@ -1524,10 +1632,24 @@ window.ELECCIONES={
   "clima": {
    "pod": [
     [
-     "Lucha contra el cambio climático, financiada con el dinero que se gasta en armas.",
-     "web",
-     false,
+     "Reducir las emisiones al menos un 55% en 2030 (con la ambición del 65%) y adelantar la neutralidad climática a 2040.",
+     "94-95",
      true,
+     false,
+     true
+    ],
+    [
+     "Al menos un 95% de electricidad renovable en 2035 y un sistema eléctrico descarbonizado en 2040.",
+     "98",
+     true,
+     false,
+     true
+    ],
+    [
+     "Cumplir el calendario de cierre de las centrales nucleares, empezando por Almaraz, con planes de transición justa.",
+     "103",
+     true,
+     false,
      false
     ]
    ],
