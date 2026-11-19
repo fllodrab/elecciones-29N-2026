@@ -18,6 +18,7 @@ Web estática (GitHub Pages, rama `main`) que compara lo que dicen por escrito F
 - Solo documentos de los propios partidos (programa oficial; si no hay, su web de campaña). Nunca prensa ni opinión como fuente de una respuesta.
 - «si» o «no» únicamente cuando el texto lo dice expresamente; «parcial» cuando trata el tema sin llegar a lo que pregunta la fila; «na» cuando no lo trata.
 - Cada respuesta lleva explicación breve y neutral y la página impresa (o `"web"`). Citar el número de medida si existe.
+- Cada pregunta lleva `x`: qué significa, en lenguaje sencillo y sin valorar (datos de contexto, no posturas de partidos). Si cambia la ley o el contexto, se actualiza.
 - Mismas preguntas y mismo número de propuestas (máx. 3 por tema) para todos. Partidos siempre en orden alfabético.
 - Paleta monocroma; no se valora qué propuesta es mejor.
 - Tipos de fuente (`k`): `2026` programa 2026, `2023` programa anterior (provisional), `web` web de campaña.

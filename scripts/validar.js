@@ -25,6 +25,7 @@ const used=new Set();
     (L||[]).forEach((x,j)=>{if(!Array.isArray(x)||x.length!==5||typeof x[0]!=="string"||typeof x[1]!=="string"||[2,3,4].some(k=>typeof x[k]!=="boolean"))err(`Propuesta ${t.id}/${pid}#${j}: formato [texto, página, concreta, coste, plazo]`)})});});
 Object.entries(q||{}).forEach(([id,x])=>{if(!used.has(id))err(`Pregunta ${id} no está en ningún tema`);
   if(!x.t)err(`Pregunta ${id}: falta t`);
+  if(!x.x)err(`Pregunta ${id}: falta x (explicación de la pregunta)`);
   ids.forEach(pid=>{const a=x.a?.[pid];
     if(!Array.isArray(a)||a.length!==3)return err(`Pregunta ${id}/${pid}: falta respuesta [valor, explicación, página]`);
     if(!V.includes(a[0]))err(`Pregunta ${id}/${pid}: valor «${a[0]}» no válido (${V.join("/")})`);
