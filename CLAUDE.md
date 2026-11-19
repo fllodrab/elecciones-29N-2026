@@ -38,6 +38,7 @@ Web estática (GitHub Pages, rama `main`) que compara lo que dicen por escrito F
 - Un caso = una sentencia **firme** desde 2000 en la que (a) el partido es condenado como partícipe a título lucrativo, o (b) es condenada por cohecho, malversación, prevaricación, tráfico de influencias, fraude a la Administración o financiación ilegal una persona que ha sido ministra, diputada o senadora en Cortes, presidenta o consejera autonómica, o tesorera o gerente nacional del partido, por hechos de cuando militaba en él.
 - Fuera: investigaciones abiertas, condenas recurridas o anuladas, otros delitos (fiscales, revelación de secretos…), cargos municipales y provinciales. No se nombra en la web a nadie sin condena firme.
 - Cada caso lleva quién, cargo, pena, delitos, tribunal, fecha y enlace oficial. Mismo criterio para los cinco partidos; si un partido no tiene casos, se dice.
+- `corrupcion.pendientes`: mismos cargos, delitos y partidos, pero sin sentencia firme. Entra si hay condena recurrible, juicio oral abierto o propuesta formal de juicio (auto de procedimiento abreviado). No entran las investigaciones en instrucción. Cada caso lleva `fase` y su nota oficial, y se muestra separado de las condenas firmes y con el aviso de presunción de inocencia. Si un pendiente acaba en condena firme, pasa a `casos`; si acaba en absolución o archivo, se quita.
 - La revisión programada no toca `corrupcion`. Si se añade un caso, se actualiza `corrupcion.revisado` y se explica en la PR.
 
 ## Revisión de fuentes (tarea programada, 08:00 y 15:00 hora de Madrid)

@@ -2523,7 +2523,7 @@ window.ELECCIONES={
  },
  "corrupcion": {
   "revisado": "2026-11-19",
-  "nota": "Condenas firmes por corrupción desde el año 2000, comprobadas en las notas oficiales del Consejo General del Poder Judicial y del Tribunal Constitucional. Cuenta un caso por cada sentencia firme en la que (a) el partido es condenado a devolver dinero como partícipe a título lucrativo, o (b) es condenada por cohecho, malversación, prevaricación, tráfico de influencias, fraude a la Administración o financiación ilegal una persona que ha sido ministra, diputada o senadora en las Cortes, presidenta o consejera autonómica, o tesorera o gerente nacional del partido, por hechos ocurridos mientras militaba en él. Una misma persona puede sumar varios casos si tiene varias sentencias firmes. No incluye investigaciones abiertas, sentencias recurridas ni cargos municipales o provinciales. Los partidos no han tenido las mismas oportunidades de gobernar: Vox se fundó en 2013, Podemos en 2014 y el Frente Amplio en 2026. La lista puede no estar completa.",
+  "nota": "Casos de corrupción desde el año 2000, comprobados en notas oficiales del Consejo General del Poder Judicial y en sentencias del Tribunal Constitucional. Un caso es una causa judicial en la que (a) el partido es condenado a devolver dinero como partícipe a título lucrativo, o (b) hay cohecho, malversación, prevaricación, tráfico de influencias, fraude a la Administración o financiación ilegal y está implicada una persona que ha sido ministra, diputada o senadora en las Cortes, presidenta o consejera autonómica, o tesorera o gerente nacional del partido, por hechos de cuando militaba en él. Una misma persona puede sumar varios casos. No incluye cargos municipales ni provinciales. Los partidos no han tenido las mismas oportunidades de gobernar: Vox se fundó en 2013, Podemos en 2014 y el Frente Amplio en 2026. La lista puede no estar completa.",
   "casos": [
    {
     "p": "pp",
@@ -2641,6 +2641,89 @@ window.ELECCIONES={
     "q": "José Luis Iglesias Riopedre, exconsejero de Educación del Principado de Asturias: 5 años y 2 meses de prisión.",
     "d": "Prevaricación, cohecho, fraude a la Administración y falsedad",
     "u": "https://www.poderjudicial.es/cgpj/gl/Poder-Xudicial/Tribunais-Superiores-de-Xustiza/TSX-Asturias/Sala-de-prensa/Hemeroteca/El-Tribunal-Supremo-impone-penas-de-hasta-nueve-anos-de-prision-a-los-principales-acusados-del--caso-Marea--por-delitos-de-prevaricacion--malversacion--cohecho-y-falsedad"
+   }
+  ],
+  "notaPendientes": "Pendientes de sentencia firme: hay una condena que aún se puede recurrir, se ha abierto juicio oral o un juez ha propuesto formalmente juzgar a la persona. No son condenas: rige la presunción de inocencia y el caso puede acabar en absolución. No incluye investigaciones en fase de instrucción.",
+  "pendientes": [
+   {
+    "p": "pp",
+    "n": "Púnica, pieza 7 (contratos con Waiter Music)",
+    "f": "2026-07-02",
+    "fase": "Condena no firme",
+    "tr": "Audiencia Nacional",
+    "q": "Francisco Granados, exconsejero de Presidencia de la Comunidad de Madrid y exsenador: condenado a 2 años y 6 meses de prisión.",
+    "d": "Fraude a la Administración y prevaricación",
+    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Oficina-de-Comunicacion/Notas-de-prensa/La-Audiencia-Nacional-condena-a-dos-anos-y-seis-meses-de-carcel-al-exconsejero-de-la-Presidencia-de-la-Comunidad-de-Madrid-Francisco-Granados-por-delitos-de-fraude-continuado-y-prevaricacion"
+   },
+   {
+    "p": "pp",
+    "n": "Campus de la Justicia de Madrid",
+    "f": "2025-03-12",
+    "fase": "Condena confirmada en apelación; no consta si es firme",
+    "tr": "Audiencia Nacional, Sala de Apelación",
+    "q": "Alfredo Prada, exvicepresidente y exconsejero de Justicia de la Comunidad de Madrid: 7 años de prisión.",
+    "d": "Prevaricación y malversación",
+    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Oficina-de-Comunicacion/Notas-de-prensa/La-Sala-de-Apelacion-de-la-Audiencia-Nacional-confirma-siete-anos-de-carcel-para-el-exvicepresidente-de-la-CAM-por-prevaricacion-y-malversacion-en-la-construccion-del-Campus-de-la-Justicia"
+   },
+   {
+    "p": "pp",
+    "n": "Caso Erial (ITV de la Comunidad Valenciana)",
+    "f": "2024-10-15",
+    "fase": "Condena no firme, recurrida ante el Supremo",
+    "tr": "Audiencia Provincial de Valencia",
+    "q": "Eduardo Zaplana, expresidente de la Generalitat Valenciana y exministro: condenado a 10 años y 5 meses de prisión.",
+    "d": "Prevaricación, cohecho, falsedad y blanqueo",
+    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/La-Audiencia-de-Valencia-condena-a-10-anos-y-5-meses-de-prision-al-expresidente-de-la-Generalitat-Eduardo-Zaplana-por-el--caso-Erial-"
+   },
+   {
+    "p": "pp",
+    "n": "Púnica, pieza 8 (suelo público y obras del Metro)",
+    "f": "2024-06-13",
+    "fase": "Propuesta formal de juicio",
+    "tr": "Audiencia Nacional",
+    "q": "Francisco Granados, exconsejero de la Comunidad de Madrid, y otras 42 personas, por adjudicaciones entre 2003 y 2011.",
+    "d": "Delitos contra la Administración pública, entre otros",
+    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Oficina-de-Comunicacion/Notas-de-prensa/La-Audiencia-Nacional-propone-juzgar-a-exconsejero-de-la-Comunidad-de-Madrid-y-otras-42-personas-por-la-adjudicacion-del-suelo-publico-y-las-obras-del-Metro"
+   },
+   {
+    "p": "pp",
+    "n": "Operación Kitchen",
+    "f": "2023-10-13",
+    "fase": "Juicio oral abierto",
+    "tr": "Audiencia Nacional",
+    "q": "Jorge Fernández Díaz, exministro del Interior, y la antigua cúpula del Ministerio, acusados por el operativo para sustraer al extesorero del PP material de la investigación de Gürtel.",
+    "d": "Entre otros, prevaricación, cohecho, tráfico de influencias y malversación",
+    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Oficina-de-Comunicacion/Notas-de-prensa/El-juez-de-la-Audiencia-Nacional-abre-juicio-oral-a-la-excupula-de-Interior-por-la--Operacion-Kitchen--y-rechaza-la-responsabilidad-a-titulo-lucrativo-del-PP"
+   },
+   {
+    "p": "pp",
+    "n": "Lezo (campo de golf del Canal de Isabel II)",
+    "f": "2021-05-26",
+    "fase": "Propuesta formal de juicio",
+    "tr": "Audiencia Nacional",
+    "q": "Ignacio González, expresidente de la Comunidad de Madrid, y otras cuatro personas, por adjudicaciones vinculadas al campo de golf del Canal.",
+    "d": "Cohecho",
+    "u": "https://www.poderjudicial.es/cgpj/en/Judiciary/National-High-Court/Pressroom/Press-Archive/El-juez-de-la-Audiencia-Nacional-propone-juzgar-al-expresidente-de-la-Comunidad-de-Madrid-y-a-otras-cuatro-personas-por-cohecho-en-las-adjudicaciones-de-contratos-vinculados-al-campo-de-golf-del-Canal-de-Isabel-II"
+   },
+   {
+    "p": "psoe",
+    "n": "Caso Mediador",
+    "f": "2026-02-12",
+    "fase": "Propuesta formal de juicio",
+    "tr": "Tribunal de Instancia de Santa Cruz de Tenerife",
+    "q": "Juan Bernardo Fuentes Curbelo, exdiputado del PSOE en el Congreso, entre las 23 personas a las que la jueza propone juzgar.",
+    "d": "Cohecho, malversación, prevaricación y tráfico de influencias, entre otros",
+    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunales-Superiores-de-Justicia/TSJ-Canarias/Oficina-de-Comunicacion/Archivo-de-notas-de-prensa/La-magistrada-del--caso-Mediador--finaliza-la-instruccion-"
+   },
+   {
+    "p": "psoe",
+    "n": "Ayudas a sociedades del exconsejero Ángel Ojeda (formación de extrabajadores de Delphi)",
+    "f": "2023-10-10",
+    "fase": "Juicio oral abierto",
+    "tr": "Juzgado de Instrucción n.º 6 de Sevilla",
+    "q": "Antonio Fernández y Manuel Recio, exconsejeros de Empleo de la Junta de Andalucía, por 33,3 millones en subvenciones.",
+    "d": "Prevaricación y malversación",
+    "u": "https://www.poderjudicial.es/cgpj/en/Judiciary/Novelties/El-juez-abre-juicio-oral-contra-dos-exconsejeros-de-Empleo-de-la-Junta-y-otros-seis-acusados-por-las-subvenciones-de-33-3-millones-a-las-sociedades-del-exconsejero-de-Hacienda"
    }
   ]
  }

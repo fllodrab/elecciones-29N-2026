@@ -52,8 +52,10 @@ if(D.corrupcion){const {revisado,nota,casos}=D.corrupcion;
   if(!/^\d{4}-\d{2}-\d{2}$/.test(revisado||""))err("corrupcion.revisado debe ser AAAA-MM-DD");
   if(!nota)err("corrupcion: falta nota");
   if(!Array.isArray(casos))err("corrupcion: falta la lista casos");
-  (casos||[]).forEach((x,j)=>{const w=`corrupcion#${j}`;
-    ["p","n","f","tr","q","d","u"].forEach(k=>{if(!x[k])err(`${w}: falta ${k}`)});
+  const {pendientes,notaPendientes}=D.corrupcion;
+  if(pendientes&&!notaPendientes)err("corrupcion: falta notaPendientes");
+  [...(casos||[]).map((x,j)=>[x,`corrupcion#${j}`,[]]),...(pendientes||[]).map((x,j)=>[x,`corrupcion.pendientes#${j}`,["fase"]])].forEach(([x,w,extra])=>{
+    ["p","n","f","tr","q","d","u",...extra].forEach(k=>{if(!x[k])err(`${w}: falta ${k}`)});
     if(x.p&&!ids.includes(x.p))err(`${w}: partido desconocido ${x.p}`);
     if(x.f&&!/^\d{4}-\d{2}-\d{2}$/.test(x.f))err(`${w}: f debe ser AAAA-MM-DD`);
     if(x.u&&!/^https:\/\/(www\.poderjudicial\.es|hj\.tribunalconstitucional\.es|www\.tribunalconstitucional\.es|www\.boe\.es)\//.test(x.u))err(`${w}: u debe ser una fuente oficial (CGPJ, TC o BOE)`);});}
