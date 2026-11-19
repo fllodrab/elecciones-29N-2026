@@ -2767,6 +2767,43 @@ window.ELECCIONES={
     "d": "Prevaricación y malversación",
     "u": "https://www.poderjudicial.es/cgpj/en/Judiciary/Novelties/El-juez-abre-juicio-oral-contra-dos-exconsejeros-de-Empleo-de-la-Junta-y-otros-seis-acusados-por-las-subvenciones-de-33-3-millones-a-las-sociedades-del-exconsejero-de-Hacienda"
    }
+  ],
+  "notaEntorno": "Entorno familiar: cónyuge o pareja (también anteriores), padres, hijos o hermanos de una persona que tiene o ha tenido uno de los cargos del criterio, con los mismos delitos y las mismas fases que el resto (condena firme o pendiente de sentencia firme). Se muestra aparte y no suma en el recuento del partido, porque la persona juzgada no tenía esos cargos. Cada caso se asigna al partido del familiar con cargo. Los casos pendientes no son condenas: rige la presunción de inocencia.",
+  "entorno": [
+   {
+    "p": "pp",
+    "n": "Lezo (campo de golf del Canal de Isabel II)",
+    "f": "2021-05-26",
+    "fase": "Propuesta formal de juicio",
+    "rel": "Hermano de Ignacio González, expresidente de la Comunidad de Madrid",
+    "tr": "Audiencia Nacional",
+    "q": "Pablo González, socio de una de las empresas adjudicatarias, entre las cinco personas a las que el juez propone juzgar junto a su hermano.",
+    "d": "Cohecho",
+    "u": "https://www.poderjudicial.es/cgpj/en/Judiciary/National-High-Court/Pressroom/Press-Archive/El-juez-de-la-Audiencia-Nacional-propone-juzgar-al-expresidente-de-la-Comunidad-de-Madrid-y-a-otras-cuatro-personas-por-cohecho-en-las-adjudicaciones-de-contratos-vinculados-al-campo-de-golf-del-Canal-de-Isabel-II"
+   },
+   {
+    "p": "pp",
+    "c": "Caso Gürtel",
+    "n": "Primera época (Pozuelo de Alarcón)",
+    "f": "2020-10-14",
+    "fase": "Condena firme",
+    "rel": "Exmarido de Ana Mato, exministra de Sanidad",
+    "tr": "Tribunal Supremo",
+    "q": "Jesús Sepúlveda, exalcalde de Pozuelo de Alarcón: 14 años y 4 meses de prisión. Ana Mato fue condenada como partícipe a título lucrativo por los viajes y servicios que la trama pagó a su familia.",
+    "d": "Cohecho, prevaricación, malversación, tráfico de influencias y fraude a la Administración, entre otros",
+    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/El-Tribunal-Supremo-confirma-penas-de-hasta-51-anos-de-prision-para-los-procesados-en-el--caso-Gurtel-"
+   },
+   {
+    "p": "psoe",
+    "n": "Plaza de coordinador de conservatorios de la Diputación de Badajoz",
+    "f": "2026-07-14",
+    "fase": "Condena no firme",
+    "rel": "Hermano de Pedro Sánchez, presidente del Gobierno",
+    "tr": "Audiencia Provincial de Badajoz",
+    "q": "David Sánchez: 9 años de inhabilitación como cooperador necesario de prevaricación. Absuelto de tráfico de influencias y de nombramiento ilegal.",
+    "d": "Prevaricación",
+    "u": "https://www.poderjudicial.es/portal/site/cgpj/menuitem.65d2c4456b6ddb628e635fc1dc432ea0/?vgnextoid=915d8c66e106f910VgnVCM1000004648ac0aRCRD"
+   }
   ]
  }
 };

@@ -41,6 +41,7 @@ Web estática (GitHub Pages, rama `main`) que compara lo que dicen por escrito F
 - Cada condena firme lleva `per`: las personas condenadas que cumplen el criterio (vacía si solo se condena al partido, con `tl: true`). La web muestra cuántas personas distintas hay por partido.
 - Cada caso lleva quién, cargo, pena, delitos, tribunal, fecha y enlace oficial. Mismo criterio para los cinco partidos; si un partido no tiene casos, se dice.
 - `corrupcion.pendientes`: mismos cargos, delitos y partidos, pero sin sentencia firme. Entra si hay condena recurrible, juicio oral abierto o propuesta formal de juicio (auto de procedimiento abreviado). No entran las investigaciones en instrucción. Cada caso lleva `fase` y su nota oficial, y se muestra separado de las condenas firmes y con el aviso de presunción de inocencia. Si un pendiente acaba en condena firme, pasa a `casos`; si acaba en absolución o archivo, se quita.
+- `corrupcion.entorno`: cónyuge o pareja (también anteriores), padres, hijos o hermanos de una persona que tiene o ha tenido uno de los cargos del criterio. Mismos delitos, mismas fases (condena firme o pendiente) y misma fuente oficial obligatoria. Cada caso lleva `fase` y `rel` (parentesco y cargo del familiar) y se asigna al partido del familiar con cargo. Se muestra aparte y no suma en el recuento del partido. Mismo criterio para los cinco partidos.
 - La revisión programada no toca `corrupcion`. Si se añade un caso, se actualiza `corrupcion.revisado` y se explica en la PR.
 
 ## Revisión de fuentes (tarea programada, 08:00 y 15:00 hora de Madrid)

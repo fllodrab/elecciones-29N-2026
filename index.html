@@ -457,10 +457,12 @@ sc.addEventListener("click",e=>{const b=e.target.closest("[data-hex]");if(!b)ret
     :`<li><b>${esc(g.c)}</b><br>${body(g.xs[0],pend)}</li>`;
   document.getElementById("corr-list").innerHTML=P.map(p=>{const L=groups(by(C.casos,p)),M=groups(by(PD,p)),k=people(p),t=asParty(p);
     const who=[...new Set(by(C.casos,p).flatMap(x=>x.per||[]))];
-    return `<details><summary>${esc(p.n)}: ${L.length} ${L.length===1?"caso firme":"casos firmes"}${C.pendientes?` · ${M.length} ${M.length===1?"pendiente":"pendientes"}`:""}</summary>
+    return `<details><summary>${esc(p.n)}: ${L.length} ${L.length===1?"caso firme":"casos firmes"}${C.pendientes?` · ${M.length} ${M.length===1?"pendiente":"pendientes"}`:""}${C.entorno?` · ${by(C.entorno,p).length} del entorno`:""}</summary>
      <h4 class="csub">Condenas firmes</h4>${L.length?`<p class="cwho">${k} ${k===1?"persona condenada":"personas condenadas"}${k?`: ${who.map(esc).join(", ")}`:""}.${t?` El partido, condenado como partícipe a título lucrativo en ${t} ${t===1?"sentencia":"sentencias"}.`:""}</p><ol>${L.map(g=>item(g,false)).join("")}</ol>`:`<p class="empty">Ningún caso cumple el criterio.</p>`}
-     ${C.pendientes?`<h4 class="csub pend">Pendientes de sentencia firme · presunción de inocencia</h4>${M.length?`<ol class="pend">${M.map(g=>item(g,true)).join("")}</ol>`:`<p class="empty">Ningún caso pendiente cumple el criterio.</p>`}`:""}</details>`}).join("");
-  if(C.notaPendientes)document.getElementById("corr-nota").textContent+=" "+C.notaPendientes;})();
+     ${C.pendientes?`<h4 class="csub pend">Pendientes de sentencia firme · presunción de inocencia</h4>${M.length?`<ol class="pend">${M.map(g=>item(g,true)).join("")}</ol>`:`<p class="empty">Ningún caso pendiente cumple el criterio.</p>`}`:""}
+     ${C.entorno?(E=>`<h4 class="csub pend">Entorno familiar de cargos · no suma en el recuento</h4>${E.length?`<ol class="pend">${E.map(x=>`<li><b>${esc(x.c?x.c+" · "+x.n:x.n)}</b><br><span class="fase">${esc(x.fase)}</span> <span class="meta">${esc(x.rel)}</span><br>${body({...x,fase:""},false)}</li>`).join("")}</ol>`:`<p class="empty">Ningún caso del entorno familiar cumple el criterio.</p>`}`)(by(C.entorno,p)):""}</details>`}).join("");
+  if(C.notaPendientes)document.getElementById("corr-nota").textContent+=" "+C.notaPendientes;
+  if(C.notaEntorno)document.getElementById("corr-nota").textContent+=" "+C.notaEntorno;})();
 go(location.hash.slice(1)||"vivienda");pill();
 };
 // Carga data.js con una marca de tiempo en la URL para que el navegador no use una copia antigua tras una actualización.
