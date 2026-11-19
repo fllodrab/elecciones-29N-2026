@@ -1602,5 +1602,901 @@ window.ELECCIONES={
     ]
    ]
   }
+ },
+ "votos": {
+  "nota": "Votaciones del Pleno del Congreso en la legislatura 2023-2026: todas las votaciones finales de leyes y convalidaciones de decretos-ley cuyo título oficial trata de este tema, de la más antigua a la más reciente. Sale de los datos abiertos del Congreso (voto de cada diputado). Frente Amplio: Grupo Plurinacional Sumar, sin los diputados de Podemos. «Dividido»: sus diputados no votaron todos igual. Muestra lo que votaron, sin valorar si es coherente con su programa.",
+  "temas": {
+   "vivienda": [
+    {
+     "t": "Prórroga de la suspensión de desahucios de colectivos vulnerables",
+     "o": "Real Decreto-ley 1/2024, de 14 de mayo, por el que se prorrogan las medidas de suspensión de lanzamientos sobre la vivienda habitual para la protección de los colectivos vulnerables.",
+     "f": "2024-06-13",
+     "r": "convalidado",
+     "tot": [
+      347,
+      0,
+      1
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=13/06/2024",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion046/20240613/Votacion024/VOT_20240613125236.json",
+     "v": {
+      "sum": [
+       "si",
+       "26 a favor, 1 no votó"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "si",
+       "137 a favor"
+      ],
+      "psoe": [
+       "si",
+       "119 a favor, 1 no votó"
+      ],
+      "vox": [
+       "div",
+       "32 a favor, 1 abst."
+      ]
+     }
+    },
+    {
+     "t": "Medidas en el alquiler por la guerra de Irán",
+     "o": "Real Decreto-ley 8/2026, de 20 de marzo, de medidas en el alquiler en respuesta a las consecuencias económicas y sociales de la Guerra de Irán.",
+     "f": "2026-04-28",
+     "r": "derogado",
+     "tot": [
+      166,
+      177,
+      5
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=28/04/2026",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion175/20260428/Votacion003/VOT_20260428200330.json",
+     "v": {
+      "sum": [
+       "si",
+       "25 a favor, 1 no votó"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "no",
+       "137 en contra"
+      ],
+      "psoe": [
+       "si",
+       "121 a favor"
+      ],
+      "vox": [
+       "no",
+       "33 en contra"
+      ]
+     }
+    }
+   ],
+   "sanidad": [
+    {
+     "t": "Ley ELA: calidad de vida de personas con ELA y enfermedades irreversibles",
+     "o": "Proposición de Ley para mejorar la calidad de vida de personas con Esclerosis Lateral Amiotrófica y otras enfermedades o procesos de alta complejidad y curso irreversible",
+     "f": "2024-10-10",
+     "r": "aprobada",
+     "tot": [
+      344,
+      0,
+      0
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=10/10/2024",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion066/20241010/Votacion015/VOT_20241010194930.json",
+     "v": {
+      "sum": [
+       "si",
+       "25 a favor, 2 no votó"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "si",
+       "136 a favor, 1 no votó"
+      ],
+      "psoe": [
+       "si",
+       "117 a favor, 3 no votó"
+      ],
+      "vox": [
+       "si",
+       "33 a favor"
+      ]
+     }
+    },
+    {
+     "t": "Ley de la Agencia Estatal de Salud Pública",
+     "o": "Proyecto de Ley por la que se crea la Agencia Estatal de Salud Pública y se modifica la Ley 33/2011, de 4 de octubre, General de Salud Pública.",
+     "f": "2025-03-20",
+     "r": "rechazada",
+     "tot": [
+      167,
+      176,
+      2
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=20/03/2025",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion101/20250320/Votacion019/VOT_20250320125720.json",
+     "v": {
+      "sum": [
+       "si",
+       "26 a favor, 1 no votó"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "no",
+       "135 en contra, 2 no votó"
+      ],
+      "psoe": [
+       "div",
+       "119 a favor, 1 en contra"
+      ],
+      "vox": [
+       "no",
+       "33 en contra"
+      ]
+     }
+    },
+    {
+     "t": "Cambio del copago farmacéutico",
+     "o": "Real Decreto-ley 11/2026, de 12 de mayo, por el que se modifica la aportación de los usuarios y sus beneficiarios en la prestación farmacéutica ambulatoria.",
+     "f": "2026-05-28",
+     "r": "convalidado",
+     "tot": [
+      164,
+      33,
+      149
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=28/05/2026",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion183/20260528/Votacion012/VOT_20260528125351.json",
+     "v": {
+      "sum": [
+       "si",
+       "26 a favor"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "abst",
+       "136 abst., 1 no votó"
+      ],
+      "psoe": [
+       "si",
+       "119 a favor, 2 no votó"
+      ],
+      "vox": [
+       "no",
+       "33 en contra"
+      ]
+     }
+    }
+   ],
+   "educacion": [
+    {
+     "t": "Ley de enseñanzas artísticas superiores",
+     "o": "Proyecto de Ley por la que se regulan las enseñanzas artísticas superiores y se establece la organización y equivalencias de las enseñanzas artísticas profesionales.",
+     "f": "2024-03-14",
+     "r": "aprobada",
+     "tot": [
+      175,
+      32,
+      139
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=14/03/2024",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion029/20240314/Votacion051/VOT_20240314123806.json",
+     "v": {
+      "sum": [
+       "si",
+       "27 a favor"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "abst",
+       "136 abst., 1 no votó"
+      ],
+      "psoe": [
+       "si",
+       "118 a favor, 2 no votó"
+      ],
+      "vox": [
+       "div",
+       "32 en contra, 1 abst."
+      ]
+     }
+    }
+   ],
+   "empleo": [
+    {
+     "t": "Reforma del subsidio por desempleo (decreto de 2023)",
+     "o": "Real Decreto-ley 7/2023, de 19 de diciembre, por el que se adoptan medidas urgentes, para completar la transposición de la Directiva (UE) 2019/1158, del Parlamento Europeo y del Consejo, de 20 de junio de 2019, relativa a la conciliación de la vida familiar y la vida profesional de los progenitores y los cuidadores, y por la que se deroga la Directiva 2010/18/UE del Consejo, y para la simplificación y mejora del nivel asistencial de la protección por desempleo.",
+     "f": "2024-01-10",
+     "r": "derogado",
+     "tot": [
+      167,
+      176,
+      0
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=10/01/2024",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion015/20240110/Votacion003/VOT_20240111114814.json",
+     "v": {
+      "sum": [
+       "si",
+       "26 a favor"
+      ],
+      "pod": [
+       "no",
+       "5 en contra"
+      ],
+      "pp": [
+       "no",
+       "137 en contra"
+      ],
+      "psoe": [
+       "si",
+       "121 a favor"
+      ],
+      "vox": [
+       "no",
+       "33 en contra"
+      ]
+     }
+    },
+    {
+     "t": "Reforma del subsidio por desempleo (decreto de 2024)",
+     "o": "Real Decreto-ley 2/2024, de 21 de mayo, por el que se adoptan medidas urgentes para la simplificación y mejora del nivel asistencial de la protección por desempleo, y para completar la transposición de la Directiva (UE) 2019/1158 del Parlamento Europeo y del Consejo, de 20 de junio de 2019, relativa a la conciliación de la vida familiar y la vida profesional de los progenitores y los cuidadores, y por la que se deroga la Directiva 2010/18/UE del Consejo.",
+     "f": "2024-06-20",
+     "r": "convalidado",
+     "tot": [
+      178,
+      0,
+      171
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=20/06/2024",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion049/20240620/Votacion019/VOT_20240620132741.json",
+     "v": {
+      "sum": [
+       "si",
+       "26 a favor, 1 no votó"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "abst",
+       "137 abst."
+      ],
+      "psoe": [
+       "si",
+       "120 a favor"
+      ],
+      "vox": [
+       "abst",
+       "33 abst."
+      ]
+     }
+    },
+    {
+     "t": "Ampliación del permiso de nacimiento y cuidado",
+     "o": "Real Decreto-ley 9/2025, de 29 de julio, por el que se amplía el permiso de nacimiento y cuidado, mediante la modificación del texto refundido de la Ley del Estatuto de los Trabajadores, aprobado por el Real Decreto Legislativo 2/2015, de 23 de octubre, el texto refundido de la Ley del Estatuto Básico del Empleado Público, aprobado por el Real Decreto Legislativo 5/2015, de 30 de octubre, y el texto refundido de la Ley General de la Seguridad Social, aprobado por el Real Decreto Legislativo 8/2015, de 30 de octubre, para completar la transposición de la Directiva (UE) 2019/1158 del Parlamento Europeo y del Consejo, de 20 de junio de 2019, relativa a la conciliación de la vida familiar y la vida profesional de los progenitores y los cuidadores, y por la que se deroga la Directiva 2010/18/UE del Consejo.",
+     "f": "2025-09-09",
+     "r": "convalidado",
+     "tot": [
+      313,
+      0,
+      33
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=09/09/2025",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion129/20250909/Votacion003/VOT_20250909221801.json",
+     "v": {
+      "sum": [
+       "si",
+       "26 a favor"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "si",
+       "135 a favor, 2 no votó"
+      ],
+      "psoe": [
+       "si",
+       "118 a favor, 2 no votó"
+      ],
+      "vox": [
+       "abst",
+       "33 abst."
+      ]
+     }
+    },
+    {
+     "t": "Retribuciones del sector público",
+     "o": "Real Decreto-ley 14/2025, de 2 de diciembre, por el que se aprueban medidas urgentes en materia de retribuciones en el ámbito del sector público.",
+     "f": "2025-12-11",
+     "r": "convalidado",
+     "tot": [
+      309,
+      32,
+      7
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=11/12/2025",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion154/20251211/Votacion012/VOT_20251211175055.json",
+     "v": {
+      "sum": [
+       "si",
+       "26 a favor"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "si",
+       "137 a favor"
+      ],
+      "psoe": [
+       "si",
+       "120 a favor"
+      ],
+      "vox": [
+       "no",
+       "32 en contra, 1 no votó"
+      ]
+     }
+    },
+    {
+     "t": "Protección laboral y social frente a los incendios forestales",
+     "o": "Real Decreto-ley 20/2026, de 29 de julio, por el que se establecen medidas urgentes de protección laboral y social frente a los incendios forestales.",
+     "f": "2026-09-09",
+     "r": "convalidado",
+     "tot": [
+      312,
+      30,
+      1
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=09/09/2026",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion195/20260909/Votacion001/VOT_20260909195430.json",
+     "v": {
+      "sum": [
+       "si",
+       "25 a favor, 1 no votó"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "si",
+       "135 a favor, 2 no votó"
+      ],
+      "psoe": [
+       "si",
+       "120 a favor, 1 no votó"
+      ],
+      "vox": [
+       "no",
+       "30 en contra, 2 no votó"
+      ]
+     }
+    }
+   ],
+   "pensiones": [
+    {
+     "t": "Compatibilidad de la pensión de jubilación con el trabajo",
+     "o": "Real Decreto-ley 11/2024, de 23 de diciembre, para la mejora de la compatibilidad de la pensión de jubilación con el trabajo.",
+     "f": "2025-01-22",
+     "r": "convalidado",
+     "tot": [
+      298,
+      51,
+      0
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=22/01/2025",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion089/20250122/Votacion003/VOT_20250122154429.json",
+     "v": {
+      "sum": [
+       "si",
+       "27 a favor"
+      ],
+      "pod": [
+       "no",
+       "4 en contra"
+      ],
+      "pp": [
+       "si",
+       "137 a favor"
+      ],
+      "psoe": [
+       "si",
+       "120 a favor"
+      ],
+      "vox": [
+       "no",
+       "33 en contra"
+      ]
+     }
+    },
+    {
+     "t": "Revalorización de las pensiones de 2026",
+     "o": "Real Decreto-ley 3/2026, de 3 de febrero, para la revalorización de las pensiones públicas y otras medidas urgentes en materia de Seguridad Social.",
+     "f": "2026-02-26",
+     "r": "convalidado",
+     "tot": [
+      317,
+      33,
+      0
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=26/02/2026",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion164/20260226/Votacion023/VOT_20260226153430.json",
+     "v": {
+      "sum": [
+       "si",
+       "26 a favor"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "si",
+       "137 a favor"
+      ],
+      "psoe": [
+       "si",
+       "121 a favor"
+      ],
+      "vox": [
+       "no",
+       "33 en contra"
+      ]
+     }
+    },
+    {
+     "t": "Mutualidades alternativas a la Seguridad Social",
+     "o": "Proposición de Ley de modificación del Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social en relación con las mutualidades alternativas reguladas en sus disposiciones adicionales 18ª y 19ª.",
+     "f": "2026-06-11",
+     "r": "aprobada",
+     "tot": [
+      180,
+      0,
+      168
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=11/06/2026",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion185/20260611/Votacion040/VOT_20260611145751.json",
+     "v": {
+      "sum": [
+       "si",
+       "26 a favor"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "abst",
+       "135 abst., 2 no votó"
+      ],
+      "psoe": [
+       "si",
+       "121 a favor"
+      ],
+      "vox": [
+       "abst",
+       "33 abst."
+      ]
+     }
+    },
+    {
+     "t": "Jubilación parcial del personal laboral de las Administraciones",
+     "o": "Real Decreto-ley 19/2026, de 29 de junio, de medidas urgentes en materia de jubilación parcial anticipada del personal laboral de las Administraciones Públicas y de complemento de insularidad en Illes Balears.",
+     "f": "2026-07-23",
+     "r": "convalidado",
+     "tot": [
+      167,
+      37,
+      144
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=23/07/2026",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion193/20260723/Votacion008/VOT_20260723211941.json",
+     "v": {
+      "sum": [
+       "si",
+       "25 a favor, 1 no votó"
+      ],
+      "pod": [
+       "no",
+       "4 en contra"
+      ],
+      "pp": [
+       "abst",
+       "136 abst., 1 no votó"
+      ],
+      "psoe": [
+       "si",
+       "121 a favor"
+      ],
+      "vox": [
+       "no",
+       "32 en contra"
+      ]
+     }
+    }
+   ],
+   "impuestos": [
+    {
+     "t": "Impuesto mínimo a multinacionales e impuesto a la banca",
+     "o": "Proyecto de Ley por la que se establecen un Impuesto Complementario para garantizar un nivel mínimo global de imposición para los grupos multinacionales y los grupos nacionales de gran magnitud, un Impuesto sobre el margen de intereses y comisiones de determinadas entidades financieras y un Impuesto sobre los líquidos para cigarrillos electrónicos y otros productos relacionados con el tabaco, y se modifican otras normas tributarias",
+     "f": "2024-11-21",
+     "r": "aprobada",
+     "tot": [
+      178,
+      171,
+      0
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=21/11/2024",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion079/20241121/Votacion062/VOT_20241121173859.json",
+     "v": {
+      "sum": [
+       "si",
+       "27 a favor"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "no",
+       "137 en contra"
+      ],
+      "psoe": [
+       "si",
+       "120 a favor"
+      ],
+      "vox": [
+       "no",
+       "33 en contra"
+      ]
+     }
+    },
+    {
+     "t": "Medidas económicas, tributarias y de Seguridad Social (diciembre de 2024)",
+     "o": "Real Decreto-ley 9/2024, de 23 de diciembre, por el que se adoptan medidas urgentes en materia económica, tributaria, de transporte, y de Seguridad Social, y se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social.",
+     "f": "2025-01-22",
+     "r": "derogado",
+     "tot": [
+      171,
+      177,
+      1
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=22/01/2025",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion089/20250122/Votacion001/VOT_20250122154425.json",
+     "v": {
+      "sum": [
+       "si",
+       "27 a favor"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "no",
+       "137 en contra"
+      ],
+      "psoe": [
+       "si",
+       "120 a favor"
+      ],
+      "vox": [
+       "no",
+       "33 en contra"
+      ]
+     }
+    },
+    {
+     "t": "Gravamen temporal energético para 2025",
+     "o": "Real Decreto-ley 10/2024, de 23 de diciembre, para el establecimiento de un gravamen temporal energético durante el año 2025.",
+     "f": "2025-01-22",
+     "r": "derogado",
+     "tot": [
+      165,
+      183,
+      1
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=22/01/2025",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion089/20250122/Votacion002/VOT_20250122154427.json",
+     "v": {
+      "sum": [
+       "si",
+       "27 a favor"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "no",
+       "137 en contra"
+      ],
+      "psoe": [
+       "si",
+       "120 a favor"
+      ],
+      "vox": [
+       "no",
+       "33 en contra"
+      ]
+     }
+    },
+    {
+     "t": "Prórroga de medidas de vulnerabilidad social y medidas tributarias (diciembre de 2025)",
+     "o": "Real Decreto-ley 16/2025, de 23 de diciembre, por el que se prorrogan determinadas medidas para hacer frente a situaciones de vulnerabilidad social, y se adoptan medidas urgentes en materia tributaria y de Seguridad Social.",
+     "f": "2026-01-27",
+     "r": "derogado",
+     "tot": [
+      171,
+      178,
+      0
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=27/01/2026",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion156/20260127/Votacion001/VOT_20260127153134.json",
+     "v": {
+      "sum": [
+       "si",
+       "26 a favor"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "no",
+       "137 en contra"
+      ],
+      "psoe": [
+       "si",
+       "120 a favor"
+      ],
+      "vox": [
+       "no",
+       "33 en contra"
+      ]
+     }
+    },
+    {
+     "t": "Vulnerabilidad social y medidas tributarias (febrero de 2026)",
+     "o": "Real Decreto-ley 2/2026, de 3 de febrero, por el que se adoptan medidas urgentes para hacer frente a situaciones de vulnerabilidad social, en materia tributaria y relativas a los recursos de los sistemas de financiación territorial.",
+     "f": "2026-02-26",
+     "r": "derogado",
+     "tot": [
+      172,
+      177,
+      1
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=26/02/2026",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion164/20260226/Votacion022/VOT_20260226153428.json",
+     "v": {
+      "sum": [
+       "si",
+       "26 a favor"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "no",
+       "137 en contra"
+      ],
+      "psoe": [
+       "si",
+       "121 a favor"
+      ],
+      "vox": [
+       "no",
+       "33 en contra"
+      ]
+     }
+    }
+   ],
+   "inmigracion": [
+    {
+     "t": "Atención a menores migrantes en contingencias migratorias extraordinarias",
+     "o": "Real Decreto-ley 2/2025, de 18 de marzo, por el que se aprueban medidas urgentes para la garantía del interés superior de la infancia y adolescencia ante situaciones de contingencias migratorias extraordinarias.",
+     "f": "2025-04-10",
+     "r": "convalidado",
+     "tot": [
+      179,
+      170,
+      1
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=10/04/2025",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion106/20250410/Votacion015/VOT_20250410155154.json",
+     "v": {
+      "sum": [
+       "si",
+       "27 a favor"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "no",
+       "137 en contra"
+      ],
+      "psoe": [
+       "si",
+       "120 a favor"
+      ],
+      "vox": [
+       "no",
+       "33 en contra"
+      ]
+     }
+    },
+    {
+     "t": "Nacionalidad española para saharauis nacidos bajo administración española",
+     "o": "Proposición de Ley sobre concesión de nacionalidad española a las y los saharauis nacidos bajo la administración española.",
+     "f": "2026-09-10",
+     "r": "aprobada",
+     "tot": [
+      168,
+      31,
+      145
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=10/09/2026",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion196/20260910/Votacion003/VOT_20260910180631.json",
+     "v": {
+      "sum": [
+       "si",
+       "26 a favor"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "abst",
+       "136 abst., 1 no votó"
+      ],
+      "psoe": [
+       "si",
+       "119 a favor, 2 no votó"
+      ],
+      "vox": [
+       "no",
+       "31 en contra, 1 no votó"
+      ]
+     }
+    }
+   ],
+   "clima": [
+    {
+     "t": "Ayudas a la movilidad eléctrica (MOVES III) para 2025",
+     "o": "Real Decreto-ley 3/2025, de 1 de abril, por el que se establece el programa de incentivos ligados a la movilidad eléctrica (MOVES III) para el año 2025.",
+     "f": "2025-04-10",
+     "r": "convalidado",
+     "tot": [
+      180,
+      33,
+      137
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=10/04/2025",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion106/20250410/Votacion013/VOT_20250410155152.json",
+     "v": {
+      "sum": [
+       "si",
+       "27 a favor"
+      ],
+      "pod": [
+       "si",
+       "4 a favor"
+      ],
+      "pp": [
+       "abst",
+       "137 abst."
+      ],
+      "psoe": [
+       "si",
+       "120 a favor"
+      ],
+      "vox": [
+       "no",
+       "33 en contra"
+      ]
+     }
+    },
+    {
+     "t": "Refuerzo del sistema eléctrico",
+     "o": "Real Decreto-ley 7/2025, de 24 de junio, por el que se aprueban medidas urgentes para el refuerzo del sistema eléctrico.",
+     "f": "2025-07-22",
+     "r": "derogado",
+     "tot": [
+      165,
+      183,
+      0
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=22/07/2025",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion128/20250722/Votacion017/VOT_20250722200830.json",
+     "v": {
+      "sum": [
+       "div",
+       "25 a favor, 1 en contra"
+      ],
+      "pod": [
+       "no",
+       "4 en contra"
+      ],
+      "pp": [
+       "no",
+       "137 en contra"
+      ],
+      "psoe": [
+       "si",
+       "120 a favor"
+      ],
+      "vox": [
+       "no",
+       "33 en contra"
+      ]
+     }
+    },
+    {
+     "t": "Ley de Movilidad Sostenible",
+     "o": "Proyecto de Ley de Movilidad Sostenible.",
+     "f": "2025-10-08",
+     "r": "aprobada",
+     "tot": [
+      174,
+      170,
+      4
+     ],
+     "u": "https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=08/10/2025",
+     "j": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion136/20251008/Votacion116/VOT_20251008195430.json",
+     "v": {
+      "sum": [
+       "si",
+       "26 a favor"
+      ],
+      "pod": [
+       "abst",
+       "4 abst."
+      ],
+      "pp": [
+       "no",
+       "136 en contra, 1 no votó"
+      ],
+      "psoe": [
+       "si",
+       "120 a favor"
+      ],
+      "vox": [
+       "no",
+       "33 en contra"
+      ]
+     }
+    }
+   ]
+  }
  }
 };

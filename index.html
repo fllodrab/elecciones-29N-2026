@@ -124,6 +124,26 @@ header{display:flex;flex-direction:column;gap:14px}
 .pg{font-family:var(--f-mono);font-size:11.5px;color:var(--muted)}
 .empty{font-size:13px;color:var(--muted)}
 
+/* votaciones en el Congreso: una fila por votación, un chip por partido (texto + relleno; sin colores de partido) */
+.votes{display:flex;flex-direction:column;gap:10px}
+.vote{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:flex;flex-direction:column;gap:10px}
+.vote .vh{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+.vote h3{font-size:15.5px;line-height:1.25}
+.vote .meta{font-family:var(--f-mono);font-size:11.5px;color:var(--muted)}
+.vgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.vcell{border:1px solid var(--line);border-radius:10px;padding:6px 4px;display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0;background:var(--raise)}
+.vcell b{font-family:var(--f-display);font-size:12.5px;letter-spacing:.02em}
+.vcell span{font-size:11.5px;text-align:center;line-height:1.2}
+.vcell small{font-family:var(--f-mono);font-size:10px;color:var(--muted);text-align:center;line-height:1.2}
+.v-si{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
+.v-si small{color:inherit;opacity:.75}
+.v-no{border:1.5px solid var(--ink)}
+.v-abst{border-style:dashed;border-color:var(--faint)}
+.v-div{background:linear-gradient(90deg,var(--soft) 50%,var(--raise) 50%)}
+.v-aus{opacity:.6}
+.vote .src2{font-size:12px;color:var(--muted)}
+@media (max-width:440px){.vcell span{font-size:10.5px}.vcell small{display:none}}
+
 /* sheet (dialog) */
 dialog{border:0;padding:0;background:transparent;max-width:min(560px,100vw);width:100%;margin:auto auto 0;color:var(--ink)}
 dialog::backdrop{background:rgba(10,12,16,.45);backdrop-filter:blur(2px)}
@@ -210,8 +230,14 @@ footer{display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--mut
   <div class="carousel" id="props"></div>
 </section>
 
+<section style="display:flex;flex-direction:column;gap:12px" aria-labelledby="h-votes" id="votes-sec" hidden>
+  <h2 id="h-votes">Qué votó en el Congreso</h2>
+  <p class="small" id="votes-nota"></p>
+  <div class="votes" id="votes"></div>
+</section>
+
 <footer>
-  <p><b>Cómo se ha hecho.</b> Solo documentos de los propios partidos. «Sí» o «No» únicamente cuando el texto lo dice expresamente; «Parcial» cuando lo trata sin llegar a lo que pregunta la fila. Mismas preguntas y mismo número de propuestas para todos.</p>
+  <p><b>Cómo se ha hecho.</b> Solo documentos de los propios partidos. «Sí» o «No» únicamente cuando el texto lo dice expresamente; «Parcial» cuando lo trata sin llegar a lo que pregunta la fila. Mismas preguntas y mismo número de propuestas para todos. Lo que votó cada partido sale de los datos abiertos de votaciones del Congreso de los Diputados.</p>
   <p><b>Limitaciones.</b> <span id="lim2023">Los programas de 2023 pueden cambiar en 2026. </span>Las páginas son las impresas y pueden variar en una. Un programa recoge promesas: lo que se apruebe dependerá de la mayoría y los pactos.</p>
   <p>Estado de los programas: <a href="https://quecambia.es/guia/29n#programas" target="_blank" rel="noopener">quecambia.es</a> y <a href="https://eleccionesenespana.es/programas/" target="_blank" rel="noopener">eleccionesenespana.es</a>.</p>
 </footer>
@@ -287,6 +313,19 @@ function render(){
   document.getElementById("props").innerHTML=P.map(p=>{const L=(DATA.props[T.id]||{})[p.id]||[];
     return `<article class="card ${p.k==="web"?"web":""}"><div class="ch"><h3>${p.n}</h3><span class="kind k-${p.k}">${p.kl}</span></div>
     ${L.length?`<ul>${L.map(x=>`<li><span>${esc(x[0])}</span><div class="tags"><span class="tag ${x[2]?"on":""}">${x[2]?"concreta":"genérica"}</span><span class="tag ${x[3]?"on":""}">${x[3]?"con coste":"sin coste"}</span><span class="tag ${x[4]?"on":""}">${x[4]?"con plazo":"sin plazo"}</span></div><span class="pg">${x[1]==="web"?"web de campaña":"p. "+esc(x[1])}</span></li>`).join("")}</ul>`:`<p class="empty">Su ${p.k==="web"?"web de campaña":"programa"} no trae propuestas sobre este tema.</p>`}</article>`}).join("");
+  renderVotes(T);
+}
+// Votaciones del Pleno (data.js → votos). Sin el bloque en los datos, la sección no se muestra.
+const VLBL={si:"A favor",no:"En contra",abst:"Abstención",div:"Dividido",aus:"No votó"};
+function renderVotes(T){
+  const V=DATA.votos,sec=document.getElementById("votes-sec");if(!V){sec.hidden=true;return}
+  sec.hidden=false;document.getElementById("votes-nota").textContent=V.nota;
+  const L=V.temas[T.id]||[];
+  const day=f=>new Date(f+"T12:00:00").toLocaleDateString("es-ES",{day:"numeric",month:"short",year:"numeric"});
+  document.getElementById("votes").innerHTML=L.length?L.map(x=>`<article class="vote"><div class="vh"><h3>${esc(x.t)}</h3><span class="meta">${day(x.f)} · ${esc(x.r)} · ${x.tot[0]} sí, ${x.tot[1]} no, ${x.tot[2]} abst.</span></div>
+    <div class="vgrid">${P.map(p=>{const [v,c]=x.v[p.id];return `<div class="vcell v-${v}" title="${esc(p.n)}: ${esc(c)}"><b>${p.ab}</b><span>${VLBL[v]}</span><small>${esc(c)}</small></div>`}).join("")}</div>
+    <p class="src2">${esc(x.o)} · <a href="${x.u}" target="_blank" rel="noopener">votación en el Congreso</a></p></article>`).join("")
+   :`<p class="empty">No hubo votaciones finales de leyes ni decretos-ley sobre este tema en la legislatura.</p>`;
 }
 
 // interactions

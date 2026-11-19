@@ -31,6 +31,21 @@ Object.entries(q||{}).forEach(([id,x])=>{if(!used.has(id))err(`Pregunta ${id} no
     if(!a[1])err(`Pregunta ${id}/${pid}: falta explicación`);
     if(a[0]!=="na"&&!a[2])err(`Pregunta ${id}/${pid}: falta página`);});
   Object.keys(x.a||{}).forEach(pid=>{if(!ids.includes(pid))err(`Pregunta ${id}: partido desconocido ${pid}`)});});
+// votos (opcional): votaciones del Pleno del Congreso por tema, con el voto de los cinco partidos
+const VV=["si","no","abst","div","aus"];
+if(D.votos){const {nota,temas}=D.votos;
+  if(!nota)err("votos: falta nota");
+  if(!temas||typeof temas!=="object")err("votos: falta temas");
+  Object.entries(temas||{}).forEach(([tid,L])=>{if(!(topics||[]).some(t=>t.id===tid))err(`votos: tema desconocido ${tid}`);
+    if(!Array.isArray(L))return err(`votos ${tid}: debe ser una lista`);
+    L.forEach((x,j)=>{const w=`votos ${tid}#${j}`;
+      ["t","o","f","r","u"].forEach(k=>{if(!x[k])err(`${w}: falta ${k}`)});
+      if(x.f&&!/^\d{4}-\d{2}-\d{2}$/.test(x.f))err(`${w}: f debe ser AAAA-MM-DD`);
+      if(x.u&&!/^https:\/\/www\.congreso\.es\//.test(x.u))err(`${w}: u debe enlazar a congreso.es`);
+      if(!Array.isArray(x.tot)||x.tot.length!==3||x.tot.some(n=>!Number.isInteger(n)))err(`${w}: tot debe ser [sí, no, abst.]`);
+      ids.forEach(pid=>{const a=x.v?.[pid];
+        if(!Array.isArray(a)||a.length!==2||!VV.includes(a[0])||typeof a[1]!=="string")err(`${w}: voto de ${pid} debe ser [${VV.join("/")}, detalle]`)});
+      Object.keys(x.v||{}).forEach(pid=>{if(!ids.includes(pid))err(`${w}: partido desconocido ${pid}`)});});});}
 const hex=["vivienda","sanidad","educacion","empleo","pensiones","impuestos","inmigracion","clima"];
 hex.forEach(t=>{if(!(topics||[]).some(x=>x.id===t))err(`Falta el tema ${t} (lo usa el hexágono de la brújula)`)});
 if(errs.length){console.error("✗ data.js tiene errores:\n- "+errs.join("\n- "));process.exit(1)}

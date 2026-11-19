@@ -3,7 +3,7 @@
 Web estática (GitHub Pages, rama `main`) que compara lo que dicen por escrito Frente Amplio, Podemos, PP, PSOE y Vox para las generales del 29-N de 2026.
 
 - `index.html`: presentación y lógica. No se toca en una actualización de datos.
-- `data.js`: todos los datos (`meta`, `parties`, `topics`, `q`, `props`). Lo que va tras `window.ELECCIONES=` es JSON estricto.
+- `data.js`: todos los datos (`meta`, `parties`, `topics`, `q`, `props`, `votos`). Lo que va tras `window.ELECCIONES=` es JSON estricto.
 - `scripts/validar.js`: `node scripts/validar.js` debe pasar antes de cualquier commit.
 
 ## Autoría (obligatorio)
@@ -21,6 +21,15 @@ Web estática (GitHub Pages, rama `main`) que compara lo que dicen por escrito F
 - Mismas preguntas y mismo número de propuestas (máx. 3 por tema) para todos. Partidos siempre en orden alfabético.
 - Paleta monocroma; no se valora qué propuesta es mejor.
 - Tipos de fuente (`k`): `2026` programa 2026, `2023` programa anterior (provisional), `web` web de campaña.
+
+## Votaciones en el Congreso (`votos`)
+
+- Única excepción a «solo documentos de los partidos»: lo que votó cada partido en el Pleno del Congreso en la XV Legislatura (2023-2026), tomado **solo de los datos abiertos de votaciones de congreso.es** (voto individual de cada diputado). Nunca prensa ni webs de terceros como fuente del voto.
+- Criterio fijo de selección: votaciones finales de leyes y convalidaciones de decretos-ley cuyo título oficial trata del tema. Todas las que cumplan el criterio, no una selección; mismas votaciones para los cinco partidos.
+- Quién es quién: PP = GP, PSOE = GS, Vox = GVOX, Frente Amplio = Grupo Plurinacional Sumar (sin los diputados de Podemos), Podemos = Belarra, Sánchez Serna, Santana y Velarde (y Verstrynge mientras fue diputada), estén en el grupo que estén.
+- Valor por partido: `si`, `no` o `abst` si todos sus diputados presentes votaron igual; `div` si se dividieron; `aus` si ninguno votó. El detalle lleva el recuento («26 a favor, 1 abst.»).
+- Solo datos, sin valorar si el voto es coherente con el programa.
+- La legislatura está cerrada (6-10-2026): la revisión programada no toca `votos`.
 
 ## Revisión de fuentes (tarea programada, 08:00 y 15:00 hora de Madrid)
 
