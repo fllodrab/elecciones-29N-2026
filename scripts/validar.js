@@ -47,6 +47,16 @@ if(D.votos){const {nota,temas}=D.votos;
       ids.forEach(pid=>{const a=x.v?.[pid];
         if(!Array.isArray(a)||a.length!==2||!VV.includes(a[0])||typeof a[1]!=="string")err(`${w}: voto de ${pid} debe ser [${VV.join("/")}, detalle]`)});
       Object.keys(x.v||{}).forEach(pid=>{if(!ids.includes(pid))err(`${w}: partido desconocido ${pid}`)});});});}
+// corrupcion (opcional): condenas firmes, cada una con enlace a una fuente oficial
+if(D.corrupcion){const {revisado,nota,casos}=D.corrupcion;
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(revisado||""))err("corrupcion.revisado debe ser AAAA-MM-DD");
+  if(!nota)err("corrupcion: falta nota");
+  if(!Array.isArray(casos))err("corrupcion: falta la lista casos");
+  (casos||[]).forEach((x,j)=>{const w=`corrupcion#${j}`;
+    ["p","n","f","tr","q","d","u"].forEach(k=>{if(!x[k])err(`${w}: falta ${k}`)});
+    if(x.p&&!ids.includes(x.p))err(`${w}: partido desconocido ${x.p}`);
+    if(x.f&&!/^\d{4}-\d{2}-\d{2}$/.test(x.f))err(`${w}: f debe ser AAAA-MM-DD`);
+    if(x.u&&!/^https:\/\/(www\.poderjudicial\.es|hj\.tribunalconstitucional\.es|www\.tribunalconstitucional\.es|www\.boe\.es)\//.test(x.u))err(`${w}: u debe ser una fuente oficial (CGPJ, TC o BOE)`);});}
 const hex=["vivienda","sanidad","educacion","empleo","pensiones","impuestos","inmigracion","clima"];
 hex.forEach(t=>{if(!(topics||[]).some(x=>x.id===t))err(`Falta el tema ${t} (lo usa el hexágono de la brújula)`)});
 if(errs.length){console.error("✗ data.js tiene errores:\n- "+errs.join("\n- "));process.exit(1)}
