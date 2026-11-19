@@ -128,6 +128,7 @@ window.ELECCIONES={
  "q": {
   "v1": {
    "t": "¿Limita por ley el precio del alquiler?",
+   "x": "Se refiere a poner por ley un tope a lo que se puede cobrar por un alquiler. La Ley de Vivienda de 2023 permite limitar las subidas en las «zonas tensionadas» que declaran las comunidades autónomas.",
    "a": {
     "pod": [
      "na",
@@ -158,6 +159,7 @@ window.ELECCIONES={
   },
   "v2": {
    "t": "¿Acelera el desalojo de viviendas ocupadas?",
+   "x": "La «okupación» es entrar a vivir en una vivienda sin permiso de su dueño. La fila mira si se proponen procedimientos más rápidos para que el propietario la recupere, por ejemplo en 24 o 48 horas.",
    "a": {
     "pod": [
      "na",
@@ -188,6 +190,7 @@ window.ELECCIONES={
   },
   "v3": {
    "t": "¿Fija una cifra de vivienda pública o social?",
+   "x": "La vivienda pública o social la construye o gestiona la Administración para alquilarla o venderla por debajo del precio de mercado. La fila mira si el programa da una cifra concreta: número de viviendas o dinero.",
    "a": {
     "pod": [
      "na",
@@ -218,6 +221,7 @@ window.ELECCIONES={
   },
   "s1": {
    "t": "¿Cuantifica más personal o gasto sanitario?",
+   "x": "La fila mira si el programa pone números a la mejora de la sanidad pública: cuántos profesionales más, qué parte del PIB o cuánto dinero.",
    "a": {
     "pod": [
      "parcial",
@@ -248,6 +252,7 @@ window.ELECCIONES={
   },
   "s2": {
    "t": "¿Limita la gestión privada o los conciertos en la sanidad pública?",
+   "x": "Parte de la sanidad pública la prestan empresas privadas mediante conciertos o concesiones (hospitales, pruebas, operaciones). La fila mira si se propone reducir o limitar esa gestión privada.",
    "a": {
     "pod": [
      "na",
@@ -278,6 +283,7 @@ window.ELECCIONES={
   },
   "s3": {
    "t": "¿Añade salud dental, visual o mental a la sanidad pública?",
+   "x": "Hoy la sanidad pública cubre de forma limitada el dentista, las gafas, los audífonos o el psicólogo. La fila mira si se propone incluirlos o ampliarlos.",
    "a": {
     "pod": [
      "na",
@@ -308,6 +314,7 @@ window.ELECCIONES={
   },
   "e1": {
    "t": "¿Deroga o sustituye la LOMLOE?",
+   "x": "La LOMLOE, conocida como «ley Celaá», es la ley de educación vigente, aprobada en 2020. La fila mira si el programa propone derogarla o sustituirla por otra.",
    "a": {
     "pod": [
      "na",
@@ -338,6 +345,7 @@ window.ELECCIONES={
   },
   "e2": {
    "t": "¿Amplía la elección de centro y los conciertos educativos?",
+   "x": "Los colegios concertados son privados pero se pagan con dinero público. La «elección de centro» es la libertad de las familias para escoger colegio. La fila mira si se propone ampliar una cosa u otra.",
    "a": {
     "pod": [
      "na",
@@ -368,6 +376,7 @@ window.ELECCIONES={
   },
   "e3": {
    "t": "¿Escuela infantil de 0 a 3 años gratuita?",
+   "x": "La etapa de 0 a 3 años (guardería o escuela infantil) no es obligatoria y en muchos sitios es de pago. La fila mira si se propone que sea gratis.",
    "a": {
     "pod": [
      "na",
@@ -398,6 +407,7 @@ window.ELECCIONES={
   },
   "t1": {
    "t": "¿Reduce por ley la jornada laboral?",
+   "x": "La jornada máxima legal es de 40 horas semanales. La fila mira si el programa propone reducirla por ley, por ejemplo a 37,5 horas o menos.",
    "a": {
     "pod": [
      "si",
@@ -428,6 +438,7 @@ window.ELECCIONES={
   },
   "t2": {
    "t": "¿Fija una cifra u objetivo de salario mínimo?",
+   "x": "El salario mínimo interprofesional (SMI) es lo mínimo que se puede pagar por una jornada completa; lo fija el Gobierno cada año. La fila mira si el programa da una cifra o un objetivo concreto.",
    "a": {
     "pod": [
      "si",
@@ -458,6 +469,7 @@ window.ELECCIONES={
   },
   "t3": {
    "t": "¿Rebaja las cuotas de los autónomos?",
+   "x": "Los autónomos pagan cada mes una cuota a la Seguridad Social que depende de sus ingresos. La fila mira si se propone rebajarla.",
    "a": {
     "pod": [
      "na",
@@ -488,6 +500,7 @@ window.ELECCIONES={
   },
   "p1": {
    "t": "¿Revaloriza las pensiones con el IPC cada año?",
+   "x": "Revalorizar con el IPC es subir las pensiones cada año lo mismo que suben los precios, para que no pierdan poder de compra. La ley vigente ya lo establece; la fila mira si el programa lo mantiene o lo garantiza.",
    "a": {
     "pod": [
      "na",
@@ -518,6 +531,7 @@ window.ELECCIONES={
   },
   "p2": {
    "t": "¿Cambia la edad legal de jubilación?",
+   "x": "La edad legal de jubilación sube de forma gradual hasta los 67 años en 2027. La fila mira si el programa propone cambiarla, para adelantarla o retrasarla.",
    "a": {
     "pod": [
      "na",
@@ -548,6 +562,7 @@ window.ELECCIONES={
   },
   "i1": {
    "t": "¿Baja el IRPF?",
+   "x": "El IRPF es el impuesto sobre la renta: lo que se paga cada año por el sueldo y otros ingresos. La fila mira si se propone bajarlo, en general o para algunos grupos.",
    "a": {
     "pod": [
      "na",
@@ -578,6 +593,7 @@ window.ELECCIONES={
   },
   "i2": {
    "t": "¿Sube impuestos a grandes fortunas, banca o energéticas?",
+   "x": "Se refiere a impuestos especiales sobre los patrimonios más grandes y a gravámenes sobre los beneficios de bancos y empresas energéticas. La fila mira si se propone crearlos o subirlos.",
    "a": {
     "pod": [
      "na",
@@ -608,6 +624,7 @@ window.ELECCIONES={
   },
   "i3": {
    "t": "¿Rebaja el IVA de los alimentos básicos?",
+   "x": "El IVA es el impuesto que se paga al comprar. Los alimentos básicos (pan, leche, fruta…) ya tienen un IVA reducido. La fila mira si se propone bajarlo más.",
    "a": {
     "pod": [
      "na",
@@ -638,6 +655,7 @@ window.ELECCIONES={
   },
   "m1": {
    "t": "¿Plantea una regularización extraordinaria de inmigrantes?",
+   "x": "Una regularización extraordinaria da permiso de residencia y trabajo, de una vez, a personas extranjeras que viven en España sin papeles y cumplen ciertos requisitos. La fila mira si se propone.",
    "a": {
     "pod": [
      "na",
@@ -668,6 +686,7 @@ window.ELECCIONES={
   },
   "m2": {
    "t": "¿Prioriza ayudas o servicios por arraigo o nacionalidad?",
+   "x": "Se refiere a dar preferencia en ayudas, vivienda pública u otros servicios según los años de residencia en España («arraigo») o la nacionalidad.",
    "a": {
     "pod": [
      "na",
@@ -698,6 +717,7 @@ window.ELECCIONES={
   },
   "m3": {
    "t": "¿Endurece las expulsiones?",
+   "x": "Se refiere a facilitar o ampliar la expulsión de extranjeros en situación irregular o que cometen delitos.",
    "a": {
     "pod": [
      "na",
@@ -728,6 +748,7 @@ window.ELECCIONES={
   },
   "c1": {
    "t": "¿Alarga la vida de las centrales nucleares?",
+   "x": "España tiene un calendario para cerrar sus centrales nucleares entre 2027 y 2035. La fila mira si se propone mantenerlas abiertas más tiempo.",
    "a": {
     "pod": [
      "na",
@@ -758,6 +779,7 @@ window.ELECCIONES={
   },
   "c2": {
    "t": "¿Endurece o adelanta los objetivos climáticos?",
+   "x": "España y la Unión Europea tienen objetivos para reducir emisiones y aumentar las renovables, con fechas como 2030 y 2050. La fila mira si se propone ser más ambicioso o ir más rápido.",
    "a": {
     "pod": [
      "na",

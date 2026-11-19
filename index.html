@@ -110,6 +110,14 @@ header{display:flex;flex-direction:column;gap:14px}
 .howto b{color:var(--ink);font-weight:600}
 .me .star svg{width:14px;height:14px;display:block;stroke:currentColor;fill:none;stroke-width:1.8}
 .me .star[aria-pressed="true"] svg{fill:currentColor}
+/* explicación de la pregunta y modo a ciegas (las posturas se ocultan hasta que respondes) */
+.qx{font-size:13px;color:var(--muted)}
+.qx summary{cursor:pointer;width:max-content;max-width:100%;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.03em;text-transform:uppercase}
+.qx p{margin-top:6px;max-width:70ch}
+.veil{background:var(--raise);border:1px dashed var(--faint);border-radius:10px;padding:14px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;font-size:13px;color:var(--muted)}
+.veil button,.blind button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 12px;cursor:pointer;font-size:12.5px}
+.blind{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-top:6px}
+.blind button[aria-pressed="true"]{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
 
 /* proposals carousel */
 .carousel{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(270px,1fr);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;scrollbar-width:thin}
@@ -264,6 +272,9 @@ const LBL={si:"Sí",no:"No",parcial:"Parcial",na:"No lo trata"};
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const tok=(p,extra="",attrs="")=>`<button type="button" class="tok k${p.k} ${extra}" ${attrs} aria-label="${p.n}">${p.ab}</button>`;
 const me={};let cur="vivienda";
+// Modo a ciegas: activado por defecto. Se recuerda en este navegador (si el almacenamiento falla, sigue activado).
+const shown={};let blind=true;
+try{blind=localStorage.getItem("ciegas")!=="no"}catch(e){}
 
 // cabecera: fecha y estado de la última revisión (data.js → meta)
 const fecha=new Date(META.revisado+"T12:00:00").toLocaleDateString("es-ES",{day:"numeric",month:"long",year:"numeric"});
@@ -293,28 +304,34 @@ function render(){
   dock.querySelectorAll(".tile").forEach(b=>b.setAttribute("aria-pressed",b.dataset.t===cur));
   const panel=document.getElementById("panel");
   panel.innerHTML=`<div class="ph">${svg(T.id)}<h2>${T.n}</h2></div>
-  <p class="howto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3.5 2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.8z"/></svg><span><b>Tu brújula.</b> Marca Sí o No en cada pregunta según tu opinión. Pulsa <b>Importante</b> en las que más te importan: cuentan el doble. El botón de abajo te muestra con quién coincides.</span></p>
+  <div class="howto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3.5 2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.8z"/></svg><div><span><b>Tu brújula.</b> Marca Sí, Parcial o No en cada pregunta según tu opinión; si no sabes qué significa, pulsa «Qué significa». Pulsa <b>Importante</b> en las que más te importan: cuentan el doble. El botón de abajo te muestra con quién coincides.</span>
+   <div class="blind"><button type="button" id="blind" aria-pressed="${blind}">${blind?"A ciegas: activado":"A ciegas: desactivado"}</button><span>${blind?"Lo que dice cada partido aparece al responder, para que no te influya.":"Ves lo que dice cada partido antes de responder."}</span></div></div></div>
   <div class="legend"><span>Toca un partido para ver qué dice y en qué página.</span>
    ${[["2026","programa 2026"],["2023","programa 2023, provisional"],["web","web de campaña"]].filter(([k])=>P.some(p=>p.k===k)).map(([k,l])=>`<span>${tok(P.find(p=>p.k===k),"","tabindex='-1' aria-hidden='true'")} ${l}</span>`).join("")}</div>`+
-  T.qs.map(qid=>{const q=DATA.q[qid];
-    const by=v=>P.filter(p=>q.a[p.id][0]===v);
-    const lane=(v,l)=>`<div class="lane l-${v}"><h4><i></i>${l}</h4><div class="toks">${by(v).map(p=>tok(p,"",`data-q="${qid}" data-p="${p.id}"`)).join("")}</div></div>`;
-    const na=by("na"),m=me[qid]||{};
-    return `<article class="q"><div class="qh"><p class="qt">${esc(q.t)}</p>
-      <div class="me" role="group" aria-label="Tu postura"><span class="lbl">Tú</span>
-       <button type="button" id="m-${qid}-si" data-me="${qid}" data-v="si" aria-pressed="${m.v==="si"}">Sí</button>
-       <button type="button" id="m-${qid}-parcial" data-me="${qid}" data-v="parcial" aria-pressed="${m.v==="parcial"}">Parcial</button>
-       <button type="button" id="m-${qid}-no" data-me="${qid}" data-v="no" aria-pressed="${m.v==="no"}">No</button>
-       <button type="button" class="star" id="m-${qid}-imp" data-me="${qid}" data-imp="1" aria-pressed="${!!m.imp}" title="Esta pregunta cuenta doble en tu brújula"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3.5 2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.8z"/></svg><span>Importante</span></button></div></div>
-      <div class="lanes">${lane("si","Sí")}${lane("parcial","Parcial")}${lane("no","No")}</div>
-      ${na.length?`<div class="tray">No lo trata: ${na.map(p=>tok(p,"",`data-q="${qid}" data-p="${p.id}"`)).join("")}</div>`:""}
-    </article>`}).join("");
+  T.qs.map(qHTML).join("");
   // proposals
   document.getElementById("props").innerHTML=P.map(p=>{const L=(DATA.props[T.id]||{})[p.id]||[];
     return `<article class="card ${p.k==="web"?"web":""}"><div class="ch"><h3>${p.n}</h3><span class="kind k-${p.k}">${p.kl}</span></div>
     ${L.length?`<ul>${L.map(x=>`<li><span>${esc(x[0])}</span><div class="tags"><span class="tag ${x[2]?"on":""}">${x[2]?"concreta":"genérica"}</span><span class="tag ${x[3]?"on":""}">${x[3]?"con coste":"sin coste"}</span><span class="tag ${x[4]?"on":""}">${x[4]?"con plazo":"sin plazo"}</span></div><span class="pg">${x[1]==="web"?"web de campaña":"p. "+esc(x[1])}</span></li>`).join("")}</ul>`:`<p class="empty">Su ${p.k==="web"?"web de campaña":"programa"} no trae propuestas sobre este tema.</p>`}</article>`}).join("");
   renderVotes(T);
 }
+// Una pregunta: título, explicación, tu postura y, salvo a ciegas sin responder, las posturas de los partidos.
+function qHTML(qid){const q=DATA.q[qid];
+  const by=v=>P.filter(p=>q.a[p.id][0]===v);
+  const lane=(v,l)=>`<div class="lane l-${v}"><h4><i></i>${l}</h4><div class="toks">${by(v).map(p=>tok(p,"",`data-q="${qid}" data-p="${p.id}"`)).join("")}</div></div>`;
+  const na=by("na"),m=me[qid]||{},hide=blind&&!m.v&&!shown[qid];
+  return `<article class="q" id="q-${qid}"><div class="qh"><div><p class="qt">${esc(q.t)}</p>${q.x?`<details class="qx"><summary>Qué significa</summary><p>${esc(q.x)}</p></details>`:""}</div>
+    <div class="me" role="group" aria-label="Tu postura"><span class="lbl">Tú</span>
+     <button type="button" id="m-${qid}-si" data-me="${qid}" data-v="si" aria-pressed="${m.v==="si"}">Sí</button>
+     <button type="button" id="m-${qid}-parcial" data-me="${qid}" data-v="parcial" aria-pressed="${m.v==="parcial"}">Parcial</button>
+     <button type="button" id="m-${qid}-no" data-me="${qid}" data-v="no" aria-pressed="${m.v==="no"}">No</button>
+     <button type="button" class="star" id="m-${qid}-imp" data-me="${qid}" data-imp="1" aria-pressed="${!!m.imp}" title="Esta pregunta cuenta doble en tu brújula"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3.5 2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.8z"/></svg><span>Importante</span></button></div></div>
+    ${hide?`<div class="veil"><span>Responde y verás qué dice cada partido.</span><button type="button" data-reveal="${qid}">Ver sin responder</button></div>`
+    :`<div class="lanes">${lane("si","Sí")}${lane("parcial","Parcial")}${lane("no","No")}</div>
+    ${na.length?`<div class="tray">No lo trata: ${na.map(p=>tok(p,"",`data-q="${qid}" data-p="${p.id}"`)).join("")}</div>`:""}`}
+  </article>`}
+function redrawQ(qid){const el=document.getElementById("q-"+qid);if(!el)return;const open=el.querySelector(".qx")?.open;
+  el.outerHTML=qHTML(qid);if(open)document.querySelector(`#q-${qid} .qx`).open=true;}
 // Votaciones del Pleno (data.js → votos). Sin el bloque en los datos, la sección no se muestra.
 const VLBL={si:"A favor",no:"En contra",abst:"Abstención",div:"Dividido",aus:"No votó"};
 function renderVotes(T){
@@ -340,10 +357,13 @@ document.getElementById("panel").addEventListener("click",e=>{
       <p>${esc(why)}</p><p class="pg">${pg&&pg!=="web"?"Página "+esc(pg)+" · ":""}<a href="${p.u}" target="_blank" rel="noopener">${esc(p.t)}</a></p>
       ${p.k==="2023"?`<p class="warn">Dato provisional: sale del programa de ${p.id==="sum"?"Sumar":p.n} de 2023. Se cambiará cuando ${p.n} publique el de 2026.</p>`:""}
       ${p.k==="web"?`<p class="warn">Dato de su web de campaña, que solo recoge cinco medidas. Si no trata algo, no significa que esté en contra.</p>`:""}`);return}
+  if(e.target.closest("#blind")){blind=!blind;try{localStorage.setItem("ciegas",blind?"si":"no")}catch(err){}render();return}
+  const rv=e.target.closest("[data-reveal]");if(rv){shown[rv.dataset.reveal]=true;redrawQ(rv.dataset.reveal);return}
   const b=e.target.closest("[data-me]");if(!b)return;const id=b.dataset.me;me[id]=me[id]||{};
   if(b.dataset.imp){me[id].imp=!me[id].imp;b.setAttribute("aria-pressed",me[id].imp)}
   else{me[id].v=me[id].v===b.dataset.v?null:b.dataset.v;
-    b.parentElement.querySelectorAll("[data-v]").forEach(x=>x.setAttribute("aria-pressed",x.dataset.v===me[id].v))}
+    if(blind&&!shown[id]&&me[id].v){shown[id]=true;redrawQ(id);document.getElementById(`m-${id}-${b.dataset.v}`)?.focus()}
+    else b.parentElement.querySelectorAll("[data-v]").forEach(x=>x.setAttribute("aria-pressed",x.dataset.v===me[id].v))}
   pill();
 });
 // Interruptor de la funcionalidad (Trunk Based Development): false vuelve a las barras.
