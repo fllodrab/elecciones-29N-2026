@@ -31,6 +31,14 @@ Web estática (GitHub Pages, rama `main`) que compara lo que dicen por escrito F
 - Solo datos, sin valorar si el voto es coherente con el programa.
 - La legislatura está cerrada (6-10-2026): la revisión programada no toca `votos`.
 
+## Condenas firmes por corrupción (`corrupcion`)
+
+- Segunda excepción a «solo documentos de los partidos». Fuente de cada caso: nota oficial del CGPJ (poderjudicial.es), sentencia del Tribunal Constitucional o BOE. La prensa solo sirve para localizar casos, nunca como fuente.
+- Un caso = una sentencia **firme** desde 2000 en la que (a) el partido es condenado como partícipe a título lucrativo, o (b) es condenada por cohecho, malversación, prevaricación, tráfico de influencias, fraude a la Administración o financiación ilegal una persona que ha sido ministra, diputada o senadora en Cortes, presidenta o consejera autonómica, o tesorera o gerente nacional del partido, por hechos de cuando militaba en él.
+- Fuera: investigaciones abiertas, condenas recurridas o anuladas, otros delitos (fiscales, revelación de secretos…), cargos municipales y provinciales. No se nombra en la web a nadie sin condena firme.
+- Cada caso lleva quién, cargo, pena, delitos, tribunal, fecha y enlace oficial. Mismo criterio para los cinco partidos; si un partido no tiene casos, se dice.
+- La revisión programada no toca `corrupcion`. Si se añade un caso, se actualiza `corrupcion.revisado` y se explica en la PR.
+
 ## Revisión de fuentes (tarea programada, 08:00 y 15:00 hora de Madrid)
 
 1. Parte de `main` actualizado. Si ya hay una PR abierta con rama `datos/…`, trabaja sobre esa rama en vez de abrir otra.
