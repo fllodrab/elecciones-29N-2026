@@ -57,6 +57,9 @@ if(D.corrupcion){const {revisado,nota,casos}=D.corrupcion;
   [...(casos||[]).map((x,j)=>[x,`corrupcion#${j}`,[]]),...(pendientes||[]).map((x,j)=>[x,`corrupcion.pendientes#${j}`,["fase"]])].forEach(([x,w,extra])=>{
     ["p","n","f","tr","q","d","u",...extra].forEach(k=>{if(!x[k])err(`${w}: falta ${k}`)});
     if(x.p&&!ids.includes(x.p))err(`${w}: partido desconocido ${x.p}`);
+    if(x.c!==undefined&&(typeof x.c!=="string"||!x.c))err(`${w}: c (causa) debe ser texto`);
+    if(!extra.length&&(!Array.isArray(x.per)||x.per.some(n=>typeof n!=="string"||!n)))err(`${w}: per debe ser la lista de personas condenadas (vacía si solo se condena al partido)`);
+    if(!extra.length&&!x.per?.length&&!x.tl)err(`${w}: sin personas condenadas, debe ser una condena al partido (tl)`);
     if(x.f&&!/^\d{4}-\d{2}-\d{2}$/.test(x.f))err(`${w}: f debe ser AAAA-MM-DD`);
     if(x.u&&!/^https:\/\/(www\.poderjudicial\.es|hj\.tribunalconstitucional\.es|www\.tribunalconstitucional\.es|www\.boe\.es)\//.test(x.u))err(`${w}: u debe ser una fuente oficial (CGPJ, TC o BOE)`);});}
 const hex=["vivienda","sanidad","educacion","empleo","pensiones","impuestos","inmigracion","clima"];

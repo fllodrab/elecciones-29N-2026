@@ -167,6 +167,11 @@ header{display:flex;flex-direction:column;gap:14px}
 /* pendientes: misma lista pero con borde discontinuo y la fase judicial visible, para no confundirlos con condenas */
 .ccell em{font-style:normal;font-family:var(--f-body);font-size:9.5px;letter-spacing:-.01em;color:var(--muted);border:1px dashed var(--faint);border-radius:8px;padding:2px 4px;margin-top:6px;display:flex;flex-direction:column;align-items:center;width:100%;max-width:100%;line-height:1.2}
 .ccell em i{font-style:normal;font-family:var(--f-display);font-size:16px;font-weight:800;color:var(--ink)}
+.ccell small{font-size:10.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.clist .cwho{margin:6px 0 0;font-size:13.5px;color:var(--muted)}
+.clist ul.piezas{margin:8px 0 0;padding-left:14px;border-left:1px solid var(--line);list-style:none;display:flex;flex-direction:column;gap:8px}
+.clist ul.piezas li{font-size:13.5px}
+.clist ul.piezas i{font-style:normal;font-weight:600}
 .csub{margin:12px 0 0;font-family:var(--f-mono);font-size:11px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
 .clist ol.pend{border-left:2px dashed var(--faint);padding-left:22px;margin-left:2px}
 .clist .fase{font-family:var(--f-mono);font-size:11px;border:1px dashed var(--faint);border-radius:4px;padding:0 5px;color:var(--ink)}
@@ -442,14 +447,19 @@ sc.addEventListener("click",e=>{const b=e.target.closest("[data-hex]");if(!b)ret
   const rev=new Date(C.revisado+"T12:00:00").toLocaleDateString("es-ES",{day:"numeric",month:"long",year:"numeric"});
   document.getElementById("corr-nota").textContent=`${C.nota} Revisado el ${rev}.`;
   const PD=C.pendientes||[],by=(L,p)=>L.filter(x=>x.p===p.id),day=f=>new Date(f+"T12:00:00").toLocaleDateString("es-ES",{day:"numeric",month:"short",year:"numeric"});
-  const cs=n=>n===1?"caso":"casos";
-  document.getElementById("corr-count").innerHTML=P.map(p=>{const n=by(C.casos,p).length,m=by(PD,p).length;
-    return `<div class="ccell"><b>${p.ab}</b><strong>${n}</strong><span>${n===1?"firme":"firmes"}</span>${C.pendientes?`<em><i>+${m}</i>${m===1?"pendiente":"pendientes"}</em>`:""}</div>`}).join("");
-  const item=(x,pend)=>`<li><b>${esc(x.n)}</b>${pend?`<br><span class="fase">${esc(x.fase)}</span>`:""}<br>${esc(x.q)}<br><span class="meta">${esc(x.d)} · ${esc(x.tr)}, ${day(x.f)} · </span><a class="meta" href="${x.u}" target="_blank" rel="noopener">fuente oficial</a></li>`;
-  document.getElementById("corr-list").innerHTML=P.map(p=>{const L=by(C.casos,p),M=by(PD,p);
-    return `<details><summary>${esc(p.n)}: ${L.length} ${L.length===1?"condena firme":"condenas firmes"}${C.pendientes?` · ${M.length} ${M.length===1?"pendiente":"pendientes"}`:""}</summary>
-     <h4 class="csub">Condenas firmes</h4>${L.length?`<ol>${L.map(x=>item(x,false)).join("")}</ol>`:`<p class="empty">Ningún caso cumple el criterio.</p>`}
-     ${C.pendientes?`<h4 class="csub pend">Pendientes de sentencia firme · presunción de inocencia</h4>${M.length?`<ol class="pend">${M.map(x=>item(x,true)).join("")}</ol>`:`<p class="empty">Ningún caso pendiente cumple el criterio.</p>`}`:""}</details>`}).join("");
+  // Un caso = una causa: las sentencias o piezas con el mismo campo c se agrupan bajo ella.
+  const groups=L=>{const m=new Map();L.forEach(x=>{const k=x.c||x.n;m.has(k)||m.set(k,[]);m.get(k).push(x)});return [...m].map(([c,xs])=>({c,xs,grouped:!!xs[0].c}))};
+  const people=p=>new Set(by(C.casos,p).flatMap(x=>x.per||[])).size,asParty=p=>by(C.casos,p).filter(x=>x.tl).length;
+  document.getElementById("corr-count").innerHTML=P.map(p=>{const n=groups(by(C.casos,p)).length,m=groups(by(PD,p)).length,k=people(p);
+    return `<div class="ccell"><b>${p.ab}</b><strong>${n}</strong><span>${n===1?"firme":"firmes"}</span><small>${k} ${k===1?"persona":"personas"}</small>${C.pendientes?`<em><i>+${m}</i>${m===1?"pendiente":"pendientes"}</em>`:""}</div>`}).join("");
+  const body=(x,pend)=>`${pend?`<span class="fase">${esc(x.fase)}</span><br>`:""}${esc(x.q)}<br><span class="meta">${esc(x.d)} · ${esc(x.tr)}, ${day(x.f)} · </span><a class="meta" href="${x.u}" target="_blank" rel="noopener">fuente oficial</a>`;
+  const item=(g,pend)=>g.grouped?`<li><b>${esc(g.c)}</b> <span class="meta">· ${g.xs.length} ${g.xs.length===1?"pieza":"piezas"}</span><ul class="piezas">${g.xs.map(x=>`<li><i>${esc(x.n)}</i><br>${body(x,pend)}</li>`).join("")}</ul></li>`
+    :`<li><b>${esc(g.c)}</b><br>${body(g.xs[0],pend)}</li>`;
+  document.getElementById("corr-list").innerHTML=P.map(p=>{const L=groups(by(C.casos,p)),M=groups(by(PD,p)),k=people(p),t=asParty(p);
+    const who=[...new Set(by(C.casos,p).flatMap(x=>x.per||[]))];
+    return `<details><summary>${esc(p.n)}: ${L.length} ${L.length===1?"caso firme":"casos firmes"}${C.pendientes?` · ${M.length} ${M.length===1?"pendiente":"pendientes"}`:""}</summary>
+     <h4 class="csub">Condenas firmes</h4>${L.length?`<p class="cwho">${k} ${k===1?"persona condenada":"personas condenadas"}${k?`: ${who.map(esc).join(", ")}`:""}.${t?` El partido, condenado como partícipe a título lucrativo en ${t} ${t===1?"sentencia":"sentencias"}.`:""}</p><ol>${L.map(g=>item(g,false)).join("")}</ol>`:`<p class="empty">Ningún caso cumple el criterio.</p>`}
+     ${C.pendientes?`<h4 class="csub pend">Pendientes de sentencia firme · presunción de inocencia</h4>${M.length?`<ol class="pend">${M.map(g=>item(g,true)).join("")}</ol>`:`<p class="empty">Ningún caso pendiente cumple el criterio.</p>`}`:""}</details>`}).join("");
   if(C.notaPendientes)document.getElementById("corr-nota").textContent+=" "+C.notaPendientes;})();
 go(location.hash.slice(1)||"vivienda");pill();
 };

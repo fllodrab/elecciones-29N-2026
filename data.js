@@ -2523,7 +2523,7 @@ window.ELECCIONES={
  },
  "corrupcion": {
   "revisado": "2026-11-19",
-  "nota": "Casos de corrupción desde el año 2000, comprobados en notas oficiales del Consejo General del Poder Judicial y en sentencias del Tribunal Constitucional. Un caso es una causa judicial en la que (a) el partido es condenado a devolver dinero como partícipe a título lucrativo, o (b) hay cohecho, malversación, prevaricación, tráfico de influencias, fraude a la Administración o financiación ilegal y está implicada una persona que ha sido ministra, diputada o senadora en las Cortes, presidenta o consejera autonómica, o tesorera o gerente nacional del partido, por hechos de cuando militaba en él. Una misma persona puede sumar varios casos. No incluye cargos municipales ni provinciales. Los partidos no han tenido las mismas oportunidades de gobernar: Vox se fundó en 2013, Podemos en 2014 y el Frente Amplio en 2026. La lista puede no estar completa.",
+  "nota": "Casos de corrupción desde el año 2000, comprobados en notas oficiales del Consejo General del Poder Judicial y en sentencias del Tribunal Constitucional. Un caso es una causa judicial (si se ha juzgado en varias piezas, cuenta como una sola) en la que (a) el partido es condenado a devolver dinero como partícipe a título lucrativo, o (b) hay cohecho, malversación, prevaricación, tráfico de influencias, fraude a la Administración o financiación ilegal y está implicada una persona que ha sido ministra, diputada o senadora en las Cortes, presidenta o consejera autonómica, o tesorera o gerente nacional del partido, por hechos de cuando militaba en él. Una misma persona puede sumar varios casos; por eso se indica también cuántas personas distintas han sido condenadas. No incluye cargos municipales ni provinciales. Los partidos no han tenido las mismas oportunidades de gobernar: Vox se fundó en 2013, Podemos en 2014 y el Frente Amplio en 2026. La lista puede no estar completa.",
   "casos": [
    {
     "p": "pp",
@@ -2532,16 +2532,22 @@ window.ELECCIONES={
     "tr": "Tribunal Supremo",
     "q": "Pedro Antonio Sánchez, expresidente de la Región de Murcia, por hechos de su etapa de alcalde: 3 años de prisión.",
     "d": "Prevaricación y falsedad documental",
-    "u": "https://www.poderjudicial.es/portal/site/cgpj/menuitem.65d2c4456b6ddb628e635fc1dc432ea0/?vgnextoid=80a547ab153d0a10VgnVCM1000004648ac0aRCRD&vgnextchannel=3f99c38cb605c210VgnVCM100000cb34e20aRCRD&vgnextfmt=default&vgnextlocale=es_ES"
+    "u": "https://www.poderjudicial.es/portal/site/cgpj/menuitem.65d2c4456b6ddb628e635fc1dc432ea0/?vgnextoid=80a547ab153d0a10VgnVCM1000004648ac0aRCRD&vgnextchannel=3f99c38cb605c210VgnVCM100000cb34e20aRCRD&vgnextfmt=default&vgnextlocale=es_ES",
+    "per": [
+     "Pedro Antonio Sánchez"
+    ]
    },
    {
     "p": "pp",
-    "n": "Gürtel, pieza de Boadilla del Monte",
+    "n": "Pieza de Boadilla del Monte",
     "f": "2022-04-05",
     "tr": "Audiencia Nacional; recursos resueltos por el Tribunal Supremo (sentencia 849/2023)",
     "q": "El PP, como partícipe a título lucrativo: debe devolver 204.198,64 € gastados en su beneficio en las campañas municipales de 2003 y 2007. El partido no figura entre los recurrentes ante el Supremo.",
     "d": "Cohecho, prevaricación, malversación y otros (de los condenados)",
-    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/El-Tribunal-Supremo-confirma-la-condena-que-la-Audiencia-Nacional-impuso-al-exalcalde-de-Boadilla-en-el-caso-Gurtel"
+    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/El-Tribunal-Supremo-confirma-la-condena-que-la-Audiencia-Nacional-impuso-al-exalcalde-de-Boadilla-en-el-caso-Gurtel",
+    "c": "Caso Gürtel",
+    "per": [],
+    "tl": true
    },
    {
     "p": "pp",
@@ -2550,16 +2556,22 @@ window.ELECCIONES={
     "tr": "Tribunal Supremo",
     "q": "Jaume Matas: 10 meses de prisión y 10 años de inhabilitación.",
     "d": "Tráfico de influencias e inducción a prevaricación y fraude a la Administración",
-    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunales-Superiores-de-Justicia/TSJ-Illes-Balears/Oficina-de-Comunicacion/Archivo-de-notas-de-prensa/El-Tribunal-Supremo-confirma-la-condena-por-trafico-de-influencias-al-expresidente-del-Gobierno-balear-por-el-caso--Son-Espases-"
+    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunales-Superiores-de-Justicia/TSJ-Illes-Balears/Oficina-de-Comunicacion/Archivo-de-notas-de-prensa/El-Tribunal-Supremo-confirma-la-condena-por-trafico-de-influencias-al-expresidente-del-Gobierno-balear-por-el-caso--Son-Espases-",
+    "per": [
+     "Jaume Matas"
+    ]
    },
    {
     "p": "pp",
-    "n": "Gürtel, primera época (Majadahonda y Pozuelo)",
+    "n": "Primera época (Majadahonda y Pozuelo)",
     "f": "2020-10-14",
     "tr": "Tribunal Supremo, sentencia 507/2020",
     "q": "El PP, como partícipe a título lucrativo: debe devolver 245.492,80 € por actos electorales pagados por la trama. Entre los 29 condenados, su extesorero Luis Bárcenas.",
     "d": "Cohecho, malversación, prevaricación, fraude a la Administración, tráfico de influencias y otros (según el condenado)",
-    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/El-Tribunal-Supremo-confirma-penas-de-hasta-51-anos-de-prision-para-los-procesados-en-el--caso-Gurtel-"
+    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/El-Tribunal-Supremo-confirma-penas-de-hasta-51-anos-de-prision-para-los-procesados-en-el--caso-Gurtel-",
+    "c": "Caso Gürtel",
+    "per": [],
+    "tl": true
    },
    {
     "p": "pp",
@@ -2568,7 +2580,10 @@ window.ELECCIONES={
     "tr": "Tribunal Supremo",
     "q": "Jaume Matas: 7 meses de prisión, 10 años de inhabilitación y devolución de 1,2 millones de euros.",
     "d": "Prevaricación y tráfico de influencias",
-    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Noticias-Judiciales/El-Tribunal-Supremo-confirma-la-condena-al-expresidente-del-Govern-Balear-a-devolver-a-la-comunidad-autonoma-1-2-millones-euros-que-cobro-el-arquitecto-Santiago-Calatrava"
+    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Noticias-Judiciales/El-Tribunal-Supremo-confirma-la-condena-al-expresidente-del-Govern-Balear-a-devolver-a-la-comunidad-autonoma-1-2-millones-euros-que-cobro-el-arquitecto-Santiago-Calatrava",
+    "per": [
+     "Jaume Matas"
+    ]
    },
    {
     "p": "pp",
@@ -2577,16 +2592,23 @@ window.ELECCIONES={
     "tr": "Tribunal Supremo",
     "q": "Jaume Matas: 3 años y 8 meses de prisión por la contratación del Instituto Nóos por el Govern balear.",
     "d": "Delitos de la causa: prevaricación, malversación, fraude a la Administración y tráfico de influencias",
-    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Noticias-Judiciales/El-Tribunal-Supremo-condena-a-Inaki-Urdangarin-a-5-anos-y-10-meses-de-prision-por-malversacion--prevaricacion--fraude--dos-delitos-fiscales-y-trafico-de-influencias-en-el--caso-Noos-"
+    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Noticias-Judiciales/El-Tribunal-Supremo-condena-a-Inaki-Urdangarin-a-5-anos-y-10-meses-de-prision-por-malversacion--prevaricacion--fraude--dos-delitos-fiscales-y-trafico-de-influencias-en-el--caso-Noos-",
+    "per": [
+     "Jaume Matas"
+    ]
    },
    {
     "p": "pp",
-    "n": "Gürtel-Fitur",
+    "n": "Pieza Fitur (Generalitat Valenciana)",
     "f": "2018-05-08",
     "tr": "Tribunal Supremo",
     "q": "Milagrosa Martínez, exconsejera de Turismo de la Generalitat Valenciana: 9 años de prisión.",
     "d": "Malversación, cohecho y prevaricación, entre otros",
-    "u": "https://www.poderjudicial.es/cgpj/ca/Poder-Judicial/Tribunal-Suprem/Noticies-Judicials/El-Tribunal-Supremo-confirma-todas-las-condenas-del--caso-Gurtel-Fitur---primer-juicio-a-la-trama"
+    "u": "https://www.poderjudicial.es/cgpj/ca/Poder-Judicial/Tribunal-Suprem/Noticies-Judicials/El-Tribunal-Supremo-confirma-todas-las-condenas-del--caso-Gurtel-Fitur---primer-juicio-a-la-trama",
+    "c": "Caso Gürtel",
+    "per": [
+     "Milagrosa Martínez"
+    ]
    },
    {
     "p": "pp",
@@ -2595,7 +2617,10 @@ window.ELECCIONES={
     "tr": "Tribunal Supremo",
     "q": "Rafael Blasco, exconsejero de la Generalitat Valenciana: 6 años y 6 meses de prisión por desviar fondos de cooperación con Nicaragua.",
     "d": "Malversación y prevaricación, en concurso con falsedad",
-    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunales-Superiores-de-Justicia/TSJ-Comunidad-Valenciana/Oficina-de-Comunicacion/Archivo-de-notas-de-prensa/El-Tribunal-Supremo-condena-a-seis-anos-y-medio-al-exconseller--de-la-Comunidad-Valenciana-Rafael-Blasco"
+    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunales-Superiores-de-Justicia/TSJ-Comunidad-Valenciana/Oficina-de-Comunicacion/Archivo-de-notas-de-prensa/El-Tribunal-Supremo-condena-a-seis-anos-y-medio-al-exconseller--de-la-Comunidad-Valenciana-Rafael-Blasco",
+    "per": [
+     "Rafael Blasco"
+    ]
    },
    {
     "p": "pp",
@@ -2604,7 +2629,10 @@ window.ELECCIONES={
     "tr": "Tribunal Supremo",
     "q": "Jaume Matas: multa de 9.000 euros y comiso de 42.111 euros.",
     "d": "Cohecho pasivo impropio",
-    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/El-Tribunal-Supremo-confirma-la-pena-de-multa-a-Jaume-Matas-por-los-pagos-de-un-hotelero-mallorquin-a-su-mujer"
+    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/El-Tribunal-Supremo-confirma-la-pena-de-multa-a-Jaume-Matas-por-los-pagos-de-un-hotelero-mallorquin-a-su-mujer",
+    "per": [
+     "Jaume Matas"
+    ]
    },
    {
     "p": "pp",
@@ -2613,7 +2641,10 @@ window.ELECCIONES={
     "tr": "Tribunal Supremo",
     "q": "Jaume Matas, expresidente del Govern balear y exministro: 9 meses de prisión.",
     "d": "Tráfico de influencias",
-    "u": "https://www.poderjudicial.es/portal/site/cgpj/menuitem.65d2c4456b6ddb628e635fc1dc432ea0/?vgnextoid=853a5025c1c00410VgnVCM1000006f48ac0aRCRD&vgnextchannel=05bc3da6cbe0a210VgnVCM100000cb34e20aRCRD&vgnextfmt=default&vgnextlocale=es"
+    "u": "https://www.poderjudicial.es/portal/site/cgpj/menuitem.65d2c4456b6ddb628e635fc1dc432ea0/?vgnextoid=853a5025c1c00410VgnVCM1000006f48ac0aRCRD&vgnextchannel=05bc3da6cbe0a210VgnVCM100000cb34e20aRCRD&vgnextfmt=default&vgnextlocale=es",
+    "per": [
+     "Jaume Matas"
+    ]
    },
    {
     "p": "psoe",
@@ -2622,7 +2653,10 @@ window.ELECCIONES={
     "tr": "Tribunal Supremo",
     "q": "José Luis Ábalos, exministro de Transportes y exsecretario de Organización del PSOE: 24 años y 3 meses de prisión.",
     "d": "Organización criminal, cohecho, malversación y tráfico de influencias",
-    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Oficina-de-Comunicacion/Notas-de-prensa/El-Tribunal-Supremo-condena-al-exministro-Jose-Luis-Abalos-y-a-su-exasesor-Koldo-Garcia-a-24-anos-y-19-anos-de-prision--respectivamente--por-delitos-de-organizacion-criminal--cohecho--malversacion-y-trafico-de-influencias"
+    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Oficina-de-Comunicacion/Notas-de-prensa/El-Tribunal-Supremo-condena-al-exministro-Jose-Luis-Abalos-y-a-su-exasesor-Koldo-Garcia-a-24-anos-y-19-anos-de-prision--respectivamente--por-delitos-de-organizacion-criminal--cohecho--malversacion-y-trafico-de-influencias",
+    "per": [
+     "José Luis Ábalos"
+    ]
    },
    {
     "p": "psoe",
@@ -2631,7 +2665,10 @@ window.ELECCIONES={
     "tr": "Tribunal Supremo (sentencia 749/2022); en 2024 el Constitucional anuló parte de las condenas, no la de José Antonio Viera (STC 90/2024)",
     "q": "José Antonio Viera, exconsejero de Empleo de la Junta de Andalucía: 7 años y 1 día de prisión. Las condenas de los expresidentes Chaves y Griñán, anuladas en parte por el Constitucional en 2024, no se tienen en cuenta aquí.",
     "d": "Prevaricación y malversación",
-    "u": "https://hj.tribunalconstitucional.es/HJ/es/Resolucion/Show/30204"
+    "u": "https://hj.tribunalconstitucional.es/HJ/es/Resolucion/Show/30204",
+    "per": [
+     "José Antonio Viera"
+    ]
    },
    {
     "p": "psoe",
@@ -2640,20 +2677,24 @@ window.ELECCIONES={
     "tr": "Tribunal Supremo",
     "q": "José Luis Iglesias Riopedre, exconsejero de Educación del Principado de Asturias: 5 años y 2 meses de prisión.",
     "d": "Prevaricación, cohecho, fraude a la Administración y falsedad",
-    "u": "https://www.poderjudicial.es/cgpj/gl/Poder-Xudicial/Tribunais-Superiores-de-Xustiza/TSX-Asturias/Sala-de-prensa/Hemeroteca/El-Tribunal-Supremo-impone-penas-de-hasta-nueve-anos-de-prision-a-los-principales-acusados-del--caso-Marea--por-delitos-de-prevaricacion--malversacion--cohecho-y-falsedad"
+    "u": "https://www.poderjudicial.es/cgpj/gl/Poder-Xudicial/Tribunais-Superiores-de-Xustiza/TSX-Asturias/Sala-de-prensa/Hemeroteca/El-Tribunal-Supremo-impone-penas-de-hasta-nueve-anos-de-prision-a-los-principales-acusados-del--caso-Marea--por-delitos-de-prevaricacion--malversacion--cohecho-y-falsedad",
+    "per": [
+     "José Luis Iglesias Riopedre"
+    ]
    }
   ],
   "notaPendientes": "Pendientes de sentencia firme: hay una condena que aún se puede recurrir, se ha abierto juicio oral o un juez ha propuesto formalmente juzgar a la persona. No son condenas: rige la presunción de inocencia y el caso puede acabar en absolución. No incluye investigaciones en fase de instrucción.",
   "pendientes": [
    {
     "p": "pp",
-    "n": "Púnica, pieza 7 (contratos con Waiter Music)",
+    "n": "Pieza 7 (contratos con Waiter Music)",
     "f": "2026-07-02",
     "fase": "Condena no firme",
     "tr": "Audiencia Nacional",
     "q": "Francisco Granados, exconsejero de Presidencia de la Comunidad de Madrid y exsenador: condenado a 2 años y 6 meses de prisión.",
     "d": "Fraude a la Administración y prevaricación",
-    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Oficina-de-Comunicacion/Notas-de-prensa/La-Audiencia-Nacional-condena-a-dos-anos-y-seis-meses-de-carcel-al-exconsejero-de-la-Presidencia-de-la-Comunidad-de-Madrid-Francisco-Granados-por-delitos-de-fraude-continuado-y-prevaricacion"
+    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Oficina-de-Comunicacion/Notas-de-prensa/La-Audiencia-Nacional-condena-a-dos-anos-y-seis-meses-de-carcel-al-exconsejero-de-la-Presidencia-de-la-Comunidad-de-Madrid-Francisco-Granados-por-delitos-de-fraude-continuado-y-prevaricacion",
+    "c": "Caso Púnica"
    },
    {
     "p": "pp",
@@ -2677,13 +2718,14 @@ window.ELECCIONES={
    },
    {
     "p": "pp",
-    "n": "Púnica, pieza 8 (suelo público y obras del Metro)",
+    "n": "Pieza 8 (suelo público y obras del Metro)",
     "f": "2024-06-13",
     "fase": "Propuesta formal de juicio",
     "tr": "Audiencia Nacional",
     "q": "Francisco Granados, exconsejero de la Comunidad de Madrid, y otras 42 personas, por adjudicaciones entre 2003 y 2011.",
     "d": "Delitos contra la Administración pública, entre otros",
-    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Oficina-de-Comunicacion/Notas-de-prensa/La-Audiencia-Nacional-propone-juzgar-a-exconsejero-de-la-Comunidad-de-Madrid-y-otras-42-personas-por-la-adjudicacion-del-suelo-publico-y-las-obras-del-Metro"
+    "u": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Oficina-de-Comunicacion/Notas-de-prensa/La-Audiencia-Nacional-propone-juzgar-a-exconsejero-de-la-Comunidad-de-Madrid-y-otras-42-personas-por-la-adjudicacion-del-suelo-publico-y-las-obras-del-Metro",
+    "c": "Caso Púnica"
    },
    {
     "p": "pp",
