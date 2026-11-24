@@ -2,8 +2,8 @@
 // El bloque tras «window.ELECCIONES=» es JSON estricto (lo comprueba scripts/validar.js).
 window.ELECCIONES={
  "meta": {
-  "revisado": "2026-11-19",
-  "estado": "Estado: incorporado el programa de Podemos («Así de básico: paz, casa y trabajo», publicado el 18 de noviembre). Los cinco partidos tienen ya programa 2026.",
+  "revisado": "2026-11-24",
+  "estado": "Estado: incorporada la versión del 23 de noviembre del programa del Frente Amplio, que añade un apartado sobre deporte; no cambia ninguna respuesta. Los cinco partidos tienen programa 2026.",
   "notaFuentes": "Los cinco partidos han publicado programa para el 29-N: Frente Amplio, PP, PSOE, Vox (enlazado desde su web de campaña, votasentidocomun.es) y Podemos (desde la web de su candidatura, pazcasaytrabajo.es)."
  },
  "parties": [
@@ -13,7 +13,7 @@ window.ELECCIONES={
    "ab": "FA",
    "k": "2026",
    "kl": "Programa 2026",
-   "t": "«Un programa como una casa» · 151 p. Movimiento Sumar, IU, Más Madrid y Comuns",
+   "t": "«Un programa como una casa» · 158 p. Movimiento Sumar, IU, Más Madrid y Comuns",
    "u": "https://frenteamplio.info/pdf/ProgramaFrenteAmplio.pdf"
   },
   {
@@ -365,7 +365,7 @@ window.ELECCIONES={
     "sum": [
      "no",
      "El objetivo es que el 100% de los fondos públicos vaya a la educación pública; mientras coexista la concertada, prohíbe las cuotas obligatorias, y elimina los conciertos con centros que segregan por sexo o por motivos religiosos.",
-     "35, 177"
+     "35, 185"
     ],
     "vox": [
      "si",
@@ -427,7 +427,7 @@ window.ELECCIONES={
     "sum": [
      "si",
      "Jornada de 37,5 horas de forma inmediata en 2026 y 35 en el sector público, y reducción progresiva hasta las 32 horas semanales sin reducción salarial.",
-     "61-62"
+     "69-70"
     ],
     "vox": [
      "na",
@@ -458,7 +458,7 @@ window.ELECCIONES={
     "sum": [
      "si",
      "Garantizará por ley una subida progresiva del SMI con un suelo permanente del 60% del salario medio neto.",
-     "57"
+     "65"
     ],
     "vox": [
      "na",
@@ -489,7 +489,7 @@ window.ELECCIONES={
     "sum": [
      "parcial",
      "Mantendrá la tarifa plana de 88 euros mientras los ingresos reales del autónomo sean inferiores al SMI anual (hoy se pierde a los dos años), sin pérdida de derechos. No es una rebaja general de cuotas.",
-     "103"
+     "111"
     ],
     "vox": [
      "si",
@@ -520,7 +520,7 @@ window.ELECCIONES={
     "sum": [
      "si",
      "Llevará a la Constitución la revalorización automática de las pensiones con el IPC y que ninguna sea inferior al SMI.",
-     "63"
+     "71"
     ],
     "vox": [
      "na",
@@ -551,7 +551,7 @@ window.ELECCIONES={
     "sum": [
      "si",
      "Devolverá la edad de jubilación a los 65 años y la reducirá en oficios penosos (construcción, limpieza, ayuda a domicilio, pesca…), que podrán jubilarse a los 60.",
-     "64"
+     "72"
     ],
     "vox": [
      "na",
@@ -582,7 +582,7 @@ window.ELECCIONES={
     "sum": [
      "si",
      "Bajará el IRPF a las rentas del trabajo de hasta 27.000 € (quien cobre el SMI no pagará IRPF); a la vez añade tramos desde 120.000 € y sube el tipo marginal hasta el 52% desde 300.000 €.",
-     "51"
+     "59"
     ],
     "vox": [
      "si",
@@ -613,7 +613,7 @@ window.ELECCIONES={
     "sum": [
      "si",
      "Patrimonios de más de un millón de euros tributarán al menos un 2% y los de más de 50 millones un 3% (tasa Zucman); tipo mínimo efectivo del 20% en Sociedades para grandes grupos y gravámenes estructurales a energéticas (1,2% de la cifra de negocios) y banca.",
-     "49-50"
+     "57-58"
     ],
     "vox": [
      "na",
@@ -644,7 +644,7 @@ window.ELECCIONES={
     "sum": [
      "parcial",
      "Bajará el IVA de bienes y servicios básicos de consumo general (sin gluten al 0%, pañales al superreducido) y propone IVA reducido o exento para alimentos ecológicos y de proximidad, pero no habla de los alimentos básicos en general.",
-     "52, 99"
+     "60, 107"
     ],
     "vox": [
      "parcial",
@@ -675,7 +675,7 @@ window.ELECCIONES={
     "sum": [
      "parcial",
      "Se compromete a culminar la regularización extraordinaria de 2026 ya en marcha y a crear un procedimiento estable y permanente de regularización en la Ley de Extranjería; no plantea una nueva regularización extraordinaria.",
-     "149"
+     "157"
     ],
     "vox": [
      "no",
@@ -706,7 +706,7 @@ window.ELECCIONES={
     "sum": [
      "no",
      "Blindará por ley la atención sanitaria universal con independencia del estatus administrativo y propone eliminar barreras de acceso a derechos (empadronamiento flexible, cuenta bancaria básica); no prioriza por arraigo ni nacionalidad.",
-     "30, 149"
+     "30, 157"
     ],
     "vox": [
      "si",
@@ -737,7 +737,7 @@ window.ELECCIONES={
     "sum": [
      "no",
      "Cerrará los CIE, derogará el «rechazo en frontera» y prohíbe las devoluciones encubiertas; rechaza los centros de retorno en terceros países.",
-     "149-150"
+     "157-158"
     ],
     "vox": [
      "si",
@@ -768,7 +768,7 @@ window.ELECCIONES={
     "sum": [
      "no",
      "Cumplirá el calendario de cierre de las centrales nucleares.",
-     "71"
+     "79"
     ],
     "vox": [
      "si",
@@ -799,7 +799,7 @@ window.ELECCIONES={
     "sum": [
      "si",
      "Revisará al alza el PNIEC y la Ley de Cambio Climático: emisiones −38% en 2035 y −85% en 2040 respecto a 1990, neutralidad en 2050, y generación renovable del 81% en 2030, 90% en 2035 y 100% en 2040.",
-     "67"
+     "75"
     ],
     "vox": [
      "no",
@@ -1234,21 +1234,21 @@ window.ELECCIONES={
    "sum": [
     [
      "Jornada de 37,5 horas de forma inmediata en 2026 (35 en el sector público) y reducción progresiva hasta 32 horas sin bajar el salario.",
-     "62",
+     "70",
      true,
      false,
      true
     ],
     [
      "Suelo legal del SMI equivalente al 60% del salario medio neto, sin que pueda absorberse con complementos.",
-     "57",
+     "65",
      true,
      false,
      false
     ],
     [
      "Tarifa plana de 88 euros mientras se ingrese menos del SMI y opción de quedar exentos de las liquidaciones trimestrales de IVA si facturan menos de 85.000 € al año.",
-     "103",
+     "111",
      true,
      false,
      false
@@ -1351,21 +1351,21 @@ window.ELECCIONES={
    "sum": [
     [
      "Reforma constitucional para blindar la revalorización con el IPC y que ninguna pensión sea inferior al SMI.",
-     "63",
+     "71",
      true,
      false,
      false
     ],
     [
      "Edad de jubilación de nuevo a los 65 años y a los 60 en oficios de especial penosidad.",
-     "64",
+     "72",
      true,
      false,
      false
     ],
     [
      "Eliminar los coeficientes reductores en la jubilación anticipada involuntaria de quienes han cotizado más de 40 años.",
-     "64",
+     "72",
      true,
      false,
      false
@@ -1468,21 +1468,21 @@ window.ELECCIONES={
    "sum": [
     [
      "Mínimo del 2% para patrimonios de más de un millón de euros y tasa Zucman del 3% anual sobre los de más de 50 millones, que financiará la Prestación Universal por Crianza.",
-     "50",
+     "58",
      true,
      false,
      false
     ],
     [
      "Tipo mínimo efectivo del 20% en Sociedades para grandes grupos, gravamen estructural del 1,2% a las grandes energéticas y gravamen bancario permanente.",
-     "49",
+     "57",
      true,
      false,
      false
     ],
     [
      "Bajar el IRPF a las rentas del trabajo de hasta 27.000 € y subir el marginal hasta el 52% desde 300.000 €.",
-     "51",
+     "59",
      true,
      false,
      false
@@ -1585,21 +1585,21 @@ window.ELECCIONES={
    "sum": [
     [
      "Culminar la regularización extraordinaria de 2026 y crear en la Ley de Extranjería un procedimiento estable y permanente de regularización.",
-     "149",
+     "157",
      true,
      false,
      false
     ],
     [
      "Cerrar los CIE y derogar la disposición de la Ley de Extranjería sobre el «rechazo en frontera».",
-     "149-150",
+     "157-158",
      true,
      false,
      false
     ],
     [
      "Cita en las oficinas de extranjería en un máximo de siete días y reagrupación familiar resuelta en tres meses, con silencio positivo.",
-     "149, 151",
+     "157, 159",
      true,
      false,
      true
@@ -1702,21 +1702,21 @@ window.ELECCIONES={
    "sum": [
     [
      "Destinar por ley el 3,5% del PIB anual a la transición ecológica.",
-     "67",
+     "75",
      true,
      true,
      false
     ],
     [
      "Emisiones −38% en 2035 y −85% en 2040 (sobre 1990), neutralidad en 2050 y generación eléctrica 100% renovable en 2040.",
-     "67",
+     "75",
      true,
      false,
      true
     ],
     [
      "Tres horas de luz gratis al día en la franja solar para todos los hogares, pagadas con el gravamen a las grandes energéticas.",
-     "71",
+     "79",
      true,
      false,
      false
